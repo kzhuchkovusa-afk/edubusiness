@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="rgba(255,255,255,0.18)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <g transform="translate(80,100)" fill="#FFFFFF">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#FFFFFF" opacity="0.15"/>
+    <text x="14" y="35" font-family="ui-monospace, monospace" font-size="22" font-weight="700">&lt;/&gt;</text>
+    <text x="76" y="38" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="28" font-weight="700">GoCoding</text>
+  </g>
+  <text x="80" y="280" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="62" font-weight="800" fill="#FFFFFF">
+    <tspan x="80" dy="0">Licensed STEM Curriculum</tspan>
+    <tspan x="80" dy="76">for Afterschool Centers.</tspan>
+  </text>
+  <text x="80" y="500" font-family="DM Sans, system-ui, sans-serif" font-size="32" fill="rgba(255,255,255,0.85)">
+    $40/month. No franchise fee. No CS degree needed.
+  </text>
+</svg>

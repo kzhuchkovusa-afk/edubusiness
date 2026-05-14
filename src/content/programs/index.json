@@ -1,0 +1,41 @@
+{
+  "programs": [
+    {
+      "slug": "scratch",
+      "name": "Scratch: Creative Coding",
+      "ageRange": "Ages 6–9",
+      "level": "Beginner",
+      "lessons": 36,
+      "tagline": "Kids build their first games and animations using visual blocks.",
+      "description": "Scratch is the perfect first language for kids. By the end of the year, every student has built 5+ projects they can show their parents."
+    },
+    {
+      "slug": "python",
+      "name": "Python: Real Code",
+      "ageRange": "Ages 10–13",
+      "level": "Intermediate",
+      "lessons": 36,
+      "tagline": "From text-based scripts to real programs. The same language used at Google and NASA.",
+      "description": "Students who finish Scratch move into Python and start writing real code — text-based, project-driven, and with measurable progress."
+    },
+    {
+      "slug": "robotics",
+      "name": "Robotics: Hands-On STEM",
+      "ageRange": "Ages 4–8",
+      "level": "Beginner",
+      "lessons": 36,
+      "tagline": "Physical robots, sensors, motors. Hands-on STEM that doesn't sit behind a screen.",
+      "description": "Robotics combines coding with engineering. Kids build, program, and test real machines — and parents see something they can hold."
+    }
+  ],
+  "roadmap": [
+    { "level": 1, "name": "Scratch Jr", "age": "4–6", "color": "primary" },
+    { "level": 2, "name": "Scratch", "age": "6–8", "color": "primary" },
+    { "level": 3, "name": "Scratch Advanced", "age": "8–10", "color": "primary" },
+    { "level": 4, "name": "Python Basics", "age": "10–12", "color": "accent" },
+    { "level": 5, "name": "Python Advanced", "age": "12–13", "color": "accent" },
+    { "level": 6, "name": "Robotics Jr", "age": "4–6", "color": "warning" },
+    { "level": 7, "name": "Robotics", "age": "6–9", "color": "warning" },
+    { "level": 8, "name": "Robotics Advanced", "age": "9–13", "color": "warning" }
+  ]
+}

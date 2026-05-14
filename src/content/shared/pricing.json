@@ -1,0 +1,53 @@
+{
+  "headline": "$40/month. No contract. No setup fee.",
+  "subheadline": "One plan. Everything included. Cancel anytime.",
+  "plan": {
+    "name": "GoCoding License",
+    "price": "$40",
+    "period": "/month per curriculum",
+    "highlights": [
+      "Full curriculum (coding or robotics)",
+      "Minute-by-minute lesson plans",
+      "Student worksheets, homework, projects",
+      "Testing & progress tracking",
+      "Parent-facing level roadmap",
+      "Marketing & operations bonuses ($1,500+ value)",
+      "Free demo lesson before you commit",
+      "Month-to-month, cancel anytime"
+    ]
+  },
+  "faqs": [
+    {
+      "q": "What's included in the $40?",
+      "a": "Everything: lessons, materials, assessments, parent reports, the marketing & ops bonuses, and ongoing updates. No setup fee, no royalty, no hidden costs."
+    },
+    {
+      "q": "Do I need to buy equipment?",
+      "a": "For coding programs (Scratch, Python): only a laptop or tablet per student. For Robotics: a starter kit per 2 students (LEGO Spike, WeDo, or comparable). We'll help you choose."
+    },
+    {
+      "q": "Can my teacher really teach this without a CS degree?",
+      "a": "Yes. Every lesson is scripted minute-by-minute, and prep takes ~10 minutes. Our partner centers run the curriculum with elementary teachers, college students, and parents."
+    },
+    {
+      "q": "What if I want multiple curricula?",
+      "a": "Each curriculum is $40/month. Most centers start with one (often Scratch) and add others as they grow."
+    },
+    {
+      "q": "Is there a minimum commitment?",
+      "a": "No. Month-to-month. Cancel anytime. No penalties or fine print."
+    },
+    {
+      "q": "How quickly can I launch?",
+      "a": "Two weeks is typical. One week for teacher onboarding (we provide the materials), one for marketing your first group."
+    },
+    {
+      "q": "Do you offer a trial?",
+      "a": "Yes — we'll send you one full demo lesson for free, before any payment. Have your teacher run it. If it doesn't work, you owe nothing."
+    },
+    {
+      "q": "What ages do the programs cover?",
+      "a": "4–13. Scratch Jr starts at age 4. Python goes up to 13. Robotics runs 4–8 (Jr) and 6–13 (advanced)."
+    }
+  ]
+}
