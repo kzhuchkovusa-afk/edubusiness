@@ -58,7 +58,6 @@ export default function TutoringCentersPage() {
         title={content.proof.title}
         points={content.proof.points}
         callout={content.proof.callout}
-        testimonials={content.proof.testimonials_placeholder}
       />
       <BenefitsSection title={content.benefits.title} columns={content.benefits.columns} />
       <WhatYouGet

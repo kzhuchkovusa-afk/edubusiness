@@ -4,16 +4,14 @@ import Icon from '@/components/shared/Icon';
 import { Quote } from 'lucide-react';
 
 type Point = { icon: string; title: string; text: string };
-type Testimonial = { quote: string; name: string; role: string };
 
 type Props = {
   title: string;
   points: Point[];
   callout: string;
-  testimonials: Testimonial[];
 };
 
-export default function SocialProof({ title, points, callout, testimonials }: Props) {
+export default function SocialProof({ title, points, callout }: Props) {
   return (
     <Section>
       <div className="reveal max-w-3xl">
@@ -41,20 +39,6 @@ export default function SocialProof({ title, points, callout, testimonials }: Pr
           <Quote className="h-8 w-8 shrink-0 text-primary" />
           <p className="text-lg leading-relaxed text-text sm:text-xl">{callout}</p>
         </div>
-      </div>
-
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className="reveal rounded-2xl border border-dashed border-border bg-white p-6 text-center"
-          >
-            <Quote className="mx-auto h-6 w-6 text-text-muted/40" />
-            <p className="mt-3 italic text-text-muted">"{t.quote}"</p>
-            <div className="mt-4 text-sm font-semibold">{t.name}</div>
-            <div className="text-xs text-text-muted">{t.role}</div>
-          </div>
-        ))}
       </div>
     </Section>
   );
