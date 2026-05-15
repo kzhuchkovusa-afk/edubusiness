@@ -110,12 +110,26 @@ Set it in **Netlify → Site settings → Environment variables** (no trailing
 slash), e.g. `https://www.yourdomain.com`, then trigger a redeploy. No code
 change needed. It falls back to a placeholder for local development.
 
+## Lead form (Netlify Forms)
+
+The "Book a call" form on `/contact` collects **name, center name, phone,
+email** and is wired to **Netlify Forms** — no third-party service, no backend.
+
+- The form name is `call-booking`.
+- `public/__forms.html` is a hidden static form so Netlify's build bot
+  reliably registers it; the visible React form (`src/components/contact/
+  ContactForm.tsx`) submits via AJAX.
+
+**To receive leads by email**, in the Netlify dashboard:
+**Site settings → Forms → Form notifications → Add notification →
+Email notification** — set the recipient to `kzhuchkovusa@gmail.com`.
+Submissions are also always visible under the **Forms** tab.
+
 ## To do (later)
 
 - Set `NEXT_PUBLIC_SITE_URL` to the real domain once chosen.
+- Add the Netlify Forms email notification (see above) so leads reach the inbox.
 - Real testimonials (placeholder cards in `tutoring-centers.json` → `proof.testimonials_placeholder`).
-- Calendly inline embed snippet in `/contact` (replace placeholder block).
-- Formspree (or similar) action URL in `ContactForm`.
 - Production OG image as `.png` (currently `.svg`).
 - Google Analytics 4 tag.
 - Future audience pages and blog.

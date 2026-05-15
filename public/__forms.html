@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify form detection</title>
+  </head>
+  <body>
+    <!--
+      This hidden static form exists so Netlify's build-time bot reliably
+      registers the lead form. The visible form is rendered by React in
+      src/components/contact/ContactForm.tsx and submits via AJAX.
+      Both share the name "call-booking", so Netlify treats them as one form.
+    -->
+    <form name="call-booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="call-booking" />
+      <input type="text" name="name" />
+      <input type="text" name="center" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>
