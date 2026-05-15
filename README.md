@@ -86,10 +86,33 @@ Static export is enabled by default (`output: 'export'`).
 npm run build    # produces /out
 ```
 
-Connect the repository to Vercel or Netlify and deploy. No server runtime needed.
+No server runtime needed.
+
+### Netlify
+
+A `netlify.toml` is included, so importing the repo on Netlify works with no
+manual build config:
+
+- Build command: `npm run build`
+- Publish directory: `out`
+
+After the first deploy, in **Site settings → Domain management** add your
+custom domain, then point DNS at Netlify (A record `@ → 75.2.60.5`,
+CNAME `www → <site>.netlify.app`, or switch to Netlify DNS). SSL is automatic.
+
+### Site URL / domain
+
+The canonical domain (used for `<title>` metadata, Open Graph tags,
+`sitemap.xml`, and `robots.txt`) is read from the `NEXT_PUBLIC_SITE_URL`
+environment variable — see `.env.example`.
+
+Set it in **Netlify → Site settings → Environment variables** (no trailing
+slash), e.g. `https://www.yourdomain.com`, then trigger a redeploy. No code
+change needed. It falls back to a placeholder for local development.
 
 ## To do (later)
 
+- Set `NEXT_PUBLIC_SITE_URL` to the real domain once chosen.
 - Real testimonials (placeholder cards in `tutoring-centers.json` → `proof.testimonials_placeholder`).
 - Calendly inline embed snippet in `/contact` (replace placeholder block).
 - Formspree (or similar) action URL in `ContactForm`.

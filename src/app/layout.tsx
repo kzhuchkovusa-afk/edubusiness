@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import StickyCTA from '@/components/layout/StickyCTA';
 import RevealScript from '@/components/shared/RevealScript';
+import { SITE_URL } from '@/lib/site';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -28,7 +29,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gocoding.example.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'GoCoding — Licensed STEM Curriculum for Afterschool Centers',
     template: '%s | GoCoding',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     title: 'GoCoding — Licensed STEM Curriculum for Afterschool Centers',
     description:
       'Licensed coding & robotics curriculum for independent afterschool centers. $40/month.',
-    url: 'https://gocoding.example.com',
+    url: SITE_URL,
     siteName: 'GoCoding',
     type: 'website',
     images: ['/images/og-image.svg'],

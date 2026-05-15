@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { getProgramSlugs } from '@/lib/content';
+import { SITE_URL } from '@/lib/site';
 
-const BASE = 'https://gocoding.example.com';
+const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
