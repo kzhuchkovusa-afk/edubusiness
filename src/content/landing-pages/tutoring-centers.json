@@ -1,0 +1,280 @@
+{
+  "slug": "tutoring-centers",
+  "meta": {
+    "title": "STEM Curriculum for Tutoring Centers",
+    "description": "Licensed coding & robotics curriculum for independent tutoring centers. $40/month. 10-minute teacher prep. 80% student retention."
+  },
+  "hero": {
+    "eyebrow": "For Exam-Prep & Tutoring Centers",
+    "headline": "How many families did you lose because you couldn't say 'Yes, we teach coding'?",
+    "subheadline": "Licensed STEM curriculum (coding + robotics, ages 4–13) for $40/month. Your teacher follows ready-made lesson plans — no CS degree needed, 10-minute prep. 80% of students advance to the next level. Stop losing families. Start keeping them for years.",
+    "cta_primary": { "text": "Book a 15-Minute Zoom", "url": "/contact" },
+    "cta_secondary": { "text": "Get a Free Demo Lesson", "url": "/contact?demo=true" },
+    "stats": [
+      { "value": 500, "suffix": "+", "label": "Children learning now" },
+      { "value": 80, "suffix": "%", "label": "Level-up rate" },
+      { "value": 40, "prefix": "$", "suffix": "/mo", "label": "Pays for itself with 1 student" },
+      { "value": 10, "suffix": " min", "label": "Teacher prep time" }
+    ]
+  },
+  "problem": {
+    "title": "Here's what's really happening.",
+    "story": [
+      "A mom with a 3rd grader walks in for a consultation. She just drove past a Code Ninjas with a bright sign: \"BUILD YOUR OWN VIDEO GAME.\" Her Instagram feed is full of Mathnasium ads targeting her ZIP code. Her PTA WhatsApp group is buzzing about robotics.",
+      "She asks: \"Do you offer coding or STEM?\"",
+      "You say: \"Not right now, but we have excellent math tutoring and SHSAT prep.\"",
+      "She nods politely. Signs up for a 6-week reading program. Doesn't renew. In September, she's at Code Ninjas. Forever.",
+      "Now multiply that by 8–12 families per year. That's $20,000–$60,000 in lost lifetime value. Every year. Not because your math program is bad — but because in a parent's mind, \"no coding\" = \"yesterday's center.\""
+    ],
+    "threat": {
+      "title": "They're already in your neighborhood — or coming this year.",
+      "competitors": [
+        { "name": "Code Ninjas", "stat": "336 US locations" },
+        { "name": "Mathnasium", "stat": "1,000+ US centers" },
+        { "name": "Kumon", "stat": "1,689 US locations" }
+      ]
+    }
+  },
+  "solution": {
+    "title": "Turn your 'no' into 'yes, and here's our 3-year roadmap.'",
+    "intro": "GoCoding License is a ready-to-run STEM program that drops into your center this month — not next year.",
+    "points": [
+      {
+        "icon": "BookOpen",
+        "title": "Full curriculum",
+        "description": "Scratch → Python → Robotics (ages 4–13). One coherent path."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Scripted minute-by-minute",
+        "description": "Every lesson is scripted. Teacher opens the plan, teaches, done."
+      },
+      {
+        "icon": "Timer",
+        "title": "10-minute prep",
+        "description": "No CS background required. Worksheets and projects included."
+      },
+      {
+        "icon": "Users",
+        "title": "Teacher-proof",
+        "description": "If a teacher leaves, a new one picks up where they left off. The system stays."
+      }
+    ],
+    "closer": "Next time a parent asks \"Do you offer coding?\" — you show them an 8-level roadmap with projects, certificates, and a clear path for their child. She stays."
+  },
+  "comparison": {
+    "title": "Why not a franchise? Why not your own teacher?",
+    "headers": ["Code Ninjas", "Your own CS hire", "GoCoding License"],
+    "rows": [
+      {
+        "label": "Startup cost",
+        "values": ["$120K–$350K + 8% royalty", "$0, but unstable", "$40/month"]
+      },
+      {
+        "label": "Time to launch",
+        "values": ["3–6 months", "1–2 months (if lucky)", "2 weeks"]
+      },
+      {
+        "label": "If teacher quits",
+        "values": ["Find replacement by their rules", "Everything falls apart", "New teacher picks up in 1 day"]
+      },
+      {
+        "label": "Control",
+        "values": ["Franchise dictates", "In teacher's head", "100% yours"]
+      },
+      {
+        "label": "Student retention",
+        "values": ["Varies", "Unpredictable", "80% advance to next level"]
+      },
+      {
+        "label": "What you get",
+        "values": ["Brand + system for $350K", "A person, not a system", "A system for the price of pizza"]
+      }
+    ]
+  },
+  "proof": {
+    "title": "Proven in real classrooms. Not in theory.",
+    "points": [
+      { "icon": "Users", "title": "500+ students", "text": "Active in the GoCoding network across US & UAE right now." },
+      { "icon": "Globe2", "title": "20+ countries", "text": "Built on CODDY International experience: 150+ locations, 8,600+ students." },
+      { "icon": "TrendingUp", "title": "80% level-up rate", "text": "Students advance to the next level — that's 3–5 years of retention." },
+      { "icon": "GraduationCap", "title": "No CS required", "text": "Teachers without coding backgrounds successfully run lessons from day one." }
+    ],
+    "callout": "78% of US parents say STEM is an important factor when choosing an afterschool program. — Afterschool Alliance, America After 3PM",
+    "testimonials_placeholder": [
+      { "quote": "Testimonial coming soon", "name": "Center Director", "role": "City, State" },
+      { "quote": "Testimonial coming soon", "name": "Owner", "role": "City, State" },
+      { "quote": "Testimonial coming soon", "name": "Founder", "role": "City, State" }
+    ]
+  },
+  "benefits": {
+    "title": "What changes in your business",
+    "columns": [
+      {
+        "title": "Stop losing families",
+        "icon": "ShieldCheck",
+        "points": [
+          "On every consultation, you have an answer: \"Yes, we offer coding and robotics\"",
+          "Parents see an 8-level roadmap — more serious than they expected",
+          "You compete with Code Ninjas on product, not brand. For $40/mo instead of $350K"
+        ]
+      },
+      {
+        "title": "Kids stay for years, not semesters",
+        "icon": "CalendarHeart",
+        "points": [
+          "80% advance to the next level — that's 3–5 years of lifetime value",
+          "Project-based lessons: kids show parents what they built → parents see value → they don't leave",
+          "Holiday and themed lessons keep engagement year-round"
+        ]
+      },
+      {
+        "title": "Your center works 12 months",
+        "icon": "Sun",
+        "points": [
+          "STEM doesn't depend on exam season — no revenue cliff after SHSAT/SAT",
+          "Summer modules and camp intensives fill empty rooms",
+          "Additional $3–5K/month revenue on the same resources"
+        ]
+      }
+    ]
+  },
+  "whatYouGet": {
+    "title": "Everything you need. Nothing you don't.",
+    "left": {
+      "title": "STEM Curriculum",
+      "subtitle": "Main package",
+      "items": [
+        "Full coding or robotics curriculum (your choice)",
+        "Age groups: 4–6, 7–9, 10–13",
+        "36+ lessons covering the full academic year",
+        "Minute-by-minute lesson plans",
+        "Student worksheets, homework, projects",
+        "Testing and progress tracking system",
+        "Level-up system with parent-facing roadmap",
+        "Holiday-themed lessons (Halloween, Christmas, etc.)",
+        "Ready-made parent feedback templates"
+      ]
+    },
+    "right": {
+      "title": "Business-in-a-Box",
+      "subtitle": "Free bonuses",
+      "items": [
+        "Marketing templates to fill your first STEM group",
+        "Consultation script: \"How to answer 'Do you offer coding?'\"",
+        "Retention & upsell playbook",
+        "Operations checklist: scheduling, teacher onboarding, tracking",
+        "Pricing strategy guide: how to charge $150–$250/month for STEM"
+      ]
+    }
+  },
+  "guarantee": {
+    "title": "Zero risk. Seriously.",
+    "cards": [
+      {
+        "icon": "FileX",
+        "title": "No contracts",
+        "text": "Month-to-month. Cancel anytime. No penalties, no minimums, no explanations needed."
+      },
+      {
+        "icon": "BookOpenCheck",
+        "title": "Free demo lesson",
+        "text": "Before you pay anything, we send you one full lesson. Have your teacher run it. If it doesn't work — you owe nothing."
+      },
+      {
+        "icon": "Coins",
+        "title": "Pays for itself with one student",
+        "text": "If one child pays $150–$250/month for classes, your $40 license pays for itself on day one."
+      }
+    ],
+    "pullquote": "Canceling costs more than keeping it. Because next consultation, you'll say 'no' to coding again. And that mom walks to Code Ninjas."
+  },
+  "pricing": {
+    "title": "$40/month. Here's the math.",
+    "left": {
+      "title": "The cost of doing nothing",
+      "lines": [
+        { "label": "Average family lifetime value", "value": "$3,600–$9,000" },
+        { "label": "Families lost per year without a coding answer", "value": "8–12" },
+        { "label": "Annual losses", "value": "$30,000–$100,000+" }
+      ]
+    },
+    "right": {
+      "title": "The cost of alternatives",
+      "bars": [
+        { "label": "Code Ninjas franchise", "value": "$120K–$350K + royalty", "weight": 100, "tone": "danger" },
+        { "label": "CS student hire", "value": "$1,500–$3,000/mo + flight risk", "weight": 50, "tone": "warning" },
+        { "label": "Build curriculum from scratch", "value": "$5K–$15K + 100 hours", "weight": 30, "tone": "warning" },
+        { "label": "GoCoding License", "value": "$40/month", "weight": 6, "tone": "accent" }
+      ]
+    },
+    "callout": "$40/month is less than one hour of an instructor's pay. Less than one no-show. Less than 0.5% of your monthly revenue. But it's the difference between 'No, we don't offer coding' and 'Yes — here's our program.'"
+  },
+  "bonuses": {
+    "title": "Included free with every license",
+    "items": [
+      {
+        "icon": "MessageSquare",
+        "title": "Parent Consultation Script",
+        "text": "Tested script for answering \"Do you offer coding?\" and closing enrollment on the spot.",
+        "value": "$500+"
+      },
+      {
+        "icon": "Megaphone",
+        "title": "Marketing Launch Kit",
+        "text": "Email templates, social media posts, flyers. Ready to use. No marketer needed.",
+        "value": "$500+"
+      },
+      {
+        "icon": "Repeat",
+        "title": "Retention & Upsell Guide",
+        "text": "How to move kids from level to level. Turn 6-month students into 3-year students.",
+        "value": "$300+"
+      },
+      {
+        "icon": "ListChecks",
+        "title": "Operations Checklist",
+        "text": "Schedule integration, teacher onboarding in 1 day, progress tracking. Plug-and-play.",
+        "value": "$200+"
+      }
+    ],
+    "total": "Total bonus value: $1,500+ — Free with any license."
+  },
+  "urgency": {
+    "title": "Every month without a STEM program is families you'll never get back.",
+    "points": [
+      {
+        "icon": "MapPin",
+        "text": "Code Ninjas has 336 locations. Mathnasium: 1,000+. Kumon: 1,689. They're already in your neighborhood."
+      },
+      {
+        "icon": "CalendarClock",
+        "text": "Exam season is ending. In 2–4 weeks the summer slump begins. Launch STEM now — by September you'll have a working program."
+      },
+      {
+        "icon": "Sun",
+        "text": "Summer is the best time to launch. Rooms are free, schedule is flexible, you can train teachers without pressure."
+      },
+      {
+        "icon": "Trophy",
+        "text": "First mover wins. There's a finite number of families in your area. The center that says \"Yes\" first gets the advantage."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Stop losing families.",
+    "primary": {
+      "title": "Book a 15-minute Zoom",
+      "text": "I'll show you one lesson from the curriculum and the roadmap you can show parents next week.",
+      "button": "Book a 15-Minute Zoom",
+      "url": "/contact"
+    },
+    "secondary": {
+      "title": "Get a free demo lesson",
+      "text": "Just reply — I'll send a free demo lesson. Your teacher can run it this week. No commitment.",
+      "button": "Get a Free Demo Lesson",
+      "url": "/contact?demo=true"
+    },
+    "footer": "$40/month. No contract. Pays for itself with one student. And you'll never say 'no' to coding again."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "robotics",
+  "name": "Robotics: Hands-On STEM",
+  "ageRange": "Ages 4–8",
+  "level": "Beginner",
+  "lessons": 36,
+  "overview": [
+    "Robotics is the most parent-visible STEM program you can run. Kids build something they can hold, name, and bring home.",
+    "Lessons cover motors, sensors, gears, and simple programming. The curriculum is kit-agnostic — works with LEGO Spike, WeDo, or comparable kits.",
+    "Each module ends with a working robot the kids built themselves. Parents take photos. Photos drive referrals."
+  ],
+  "modules": [
+    { "title": "Module 1: First Builds", "lessons": 4, "summary": "Frames, wheels, basic assembly." },
+    { "title": "Module 2: Motion", "lessons": 4, "summary": "Motors, gears, going forward and turning." },
+    { "title": "Module 3: Sensors", "lessons": 4, "summary": "Touch and distance sensors, reactive behavior." },
+    { "title": "Module 4: Logic", "lessons": 4, "summary": "If/then on the robot, simple loops." },
+    { "title": "Module 5: Maze Solver", "lessons": 6, "summary": "Robot navigates a simple maze." },
+    { "title": "Module 6: Themed Builds", "lessons": 4, "summary": "Animals, vehicles, helpers." },
+    { "title": "Module 7: Mini-Challenges", "lessons": 4, "summary": "Speed, line-follow, push-out-of-arena." },
+    { "title": "Module 8: Showcase", "lessons": 6, "summary": "Kids design and present their own robot." }
+  ],
+  "sampleLesson": {
+    "title": "Lesson 9 — The Bumper Bot",
+    "duration": "60 minutes",
+    "steps": [
+      { "time": "0–5 min", "activity": "Warm-up: what does a sensor do?" },
+      { "time": "5–20 min", "activity": "Build: attach the touch sensor and bumper" },
+      { "time": "20–40 min", "activity": "Program: when bumper is pressed, back up and turn" },
+      { "time": "40–55 min", "activity": "Test on the arena floor, iterate" },
+      { "time": "55–60 min", "activity": "Group demo — every team shows their bot" }
+    ]
+  },
+  "teacherIncluded": [
+    "Minute-by-minute lesson plan",
+    "Build cards (visual, kid-friendly)",
+    "Programming cheat sheets",
+    "Assessments based on completed builds, not paper tests",
+    "Parent showcase day playbook"
+  ],
+  "projects": [
+    "A robot that follows a black line",
+    "A bumper robot that avoids obstacles",
+    "A themed build of the student's choice (showcase day)"
+  ],
+  "prerequisites": "None — this is a beginner course. Recommended ages 4–8.",
+  "nextStep": "python"
+}

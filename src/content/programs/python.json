@@ -1,0 +1,47 @@
+{
+  "slug": "python",
+  "name": "Python: Real Code",
+  "ageRange": "Ages 10–13",
+  "level": "Intermediate",
+  "lessons": 36,
+  "overview": [
+    "Python is the most-used programming language in the world — and a natural step-up from Scratch. Students move from blocks to text, but the concepts they already know come along.",
+    "By the end of the year, students have built command-line tools, simple games, and a final capstone project they can show parents and put on a portfolio.",
+    "Each lesson is 60 minutes with hands-on coding from minute one. No lectures."
+  ],
+  "modules": [
+    { "title": "Module 1: Python Basics", "lessons": 4, "summary": "print, variables, input, types." },
+    { "title": "Module 2: Logic & Control", "lessons": 4, "summary": "if/elif/else, comparisons, boolean logic." },
+    { "title": "Module 3: Loops", "lessons": 4, "summary": "for, while, range, accumulators." },
+    { "title": "Module 4: Functions", "lessons": 4, "summary": "Defining, parameters, returning, scope." },
+    { "title": "Module 5: Lists & Strings", "lessons": 4, "summary": "Indexing, slicing, common methods." },
+    { "title": "Module 6: Mini Games", "lessons": 6, "summary": "Number guess, hangman, rock-paper-scissors." },
+    { "title": "Module 7: Files & Data", "lessons": 4, "summary": "Read/write files, dictionaries, simple JSON." },
+    { "title": "Module 8: Capstone", "lessons": 6, "summary": "Build & ship a personal project." }
+  ],
+  "sampleLesson": {
+    "title": "Lesson 14 — Number Guess Game",
+    "duration": "60 minutes",
+    "steps": [
+      { "time": "0–5 min", "activity": "Warm-up: recall last week's loops" },
+      { "time": "5–15 min", "activity": "Teacher walks through the game logic on the board" },
+      { "time": "15–45 min", "activity": "Students code along, hint by hint" },
+      { "time": "45–55 min", "activity": "Stretch goal: track number of tries" },
+      { "time": "55–60 min", "activity": "Demo & code review" }
+    ]
+  },
+  "teacherIncluded": [
+    "Minute-by-minute lesson plan",
+    "Student notebooks (Jupyter and plain Python versions)",
+    "Homework with auto-grading hints",
+    "Mid-term and end-of-term assessments",
+    "Parent progress report templates"
+  ],
+  "projects": [
+    "A text-based adventure game",
+    "A times-table quiz with score tracking",
+    "A personal CLI tool of the student's choice"
+  ],
+  "prerequisites": "Comfortable reading and typing. Scratch experience helpful but not required.",
+  "nextStep": "robotics"
+}

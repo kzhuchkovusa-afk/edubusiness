@@ -1,0 +1,47 @@
+{
+  "slug": "scratch",
+  "name": "Scratch: Creative Coding",
+  "ageRange": "Ages 6–9",
+  "level": "Beginner",
+  "lessons": 36,
+  "overview": [
+    "Scratch is the world's most successful programming environment for kids. Visual blocks replace syntax, but every core concept — loops, conditionals, variables, events — is real.",
+    "Over 36 lessons, students build 8–10 finished projects: animations, mini-games, interactive stories. By the end of the year, they're ready for text-based code.",
+    "Lessons run 60 minutes. Each one ends with a small deliverable parents can see at home — which drives renewals."
+  ],
+  "modules": [
+    { "title": "Module 1: First Animations", "lessons": 4, "summary": "Sprites, motion, looks, simple loops." },
+    { "title": "Module 2: Events & Interactivity", "lessons": 4, "summary": "Keyboard input, broadcasts, scene changes." },
+    { "title": "Module 3: First Game", "lessons": 6, "summary": "Maze game with scoring, lives, and win condition." },
+    { "title": "Module 4: Variables & Logic", "lessons": 4, "summary": "Counters, conditionals, decision trees." },
+    { "title": "Module 5: Interactive Stories", "lessons": 4, "summary": "Multi-scene storytelling with branching choices." },
+    { "title": "Module 6: Arcade Classics", "lessons": 6, "summary": "Pong, Catch the Apple, Brick Breaker." },
+    { "title": "Module 7: Lists & Data", "lessons": 4, "summary": "Lists, randomness, basic data flow." },
+    { "title": "Module 8: Capstone", "lessons": 4, "summary": "Students design and ship their own original game." }
+  ],
+  "sampleLesson": {
+    "title": "Lesson 12 — Build a Maze (Part 1)",
+    "duration": "60 minutes",
+    "steps": [
+      { "time": "0–5 min", "activity": "Warm-up: review of broadcasts" },
+      { "time": "5–15 min", "activity": "Teacher demo: drawing the maze backdrop" },
+      { "time": "15–35 min", "activity": "Students build their own maze (worksheet step-by-step)" },
+      { "time": "35–50 min", "activity": "Add the player sprite + keyboard movement" },
+      { "time": "50–60 min", "activity": "Show & tell: each student demos their maze" }
+    ]
+  },
+  "teacherIncluded": [
+    "Minute-by-minute lesson plan",
+    "Student worksheets (PDF + editable)",
+    "Homework assignments",
+    "Mid-term and end-of-term assessments",
+    "Parent progress report templates"
+  ],
+  "projects": [
+    "An animated birthday card",
+    "A 2D maze game with multiple levels",
+    "An interactive story with branching choices"
+  ],
+  "prerequisites": "None — this is a beginner course. Basic reading required.",
+  "nextStep": "python"
+}
