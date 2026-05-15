@@ -3,7 +3,7 @@ import Section from '@/components/shared/Section';
 import SectionHeading from '@/components/shared/SectionHeading';
 import Badge from '@/components/shared/Badge';
 import ContactForm from '@/components/contact/ContactForm';
-import { Check, Gift, Linkedin, Mail } from 'lucide-react';
+import { Check, Gift } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Book a Call',
@@ -70,20 +70,6 @@ export default function ContactPage() {
             </p>
             <div className="mt-6">
               <ContactForm />
-            </div>
-            <div className="mt-8 grid gap-3 border-t border-border pt-6 text-sm">
-              <a
-                href="mailto:kzhuchkovusa@gmail.com"
-                className="inline-flex items-center gap-2 text-text hover:text-primary"
-              >
-                <Mail className="h-4 w-4" /> kzhuchkovusa@gmail.com
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-text hover:text-primary"
-              >
-                <Linkedin className="h-4 w-4" /> LinkedIn
-              </a>
             </div>
           </div>
         </div>
