@@ -68,6 +68,12 @@ export default function RootLayout({
       lang="en"
       className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable}`}
     >
+      <head>
+        <noscript>
+          {/* Without JS the IntersectionObserver never runs — keep content visible. */}
+          <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
+        </noscript>
+      </head>
       <body className="bg-bg text-text">
         <Header />
         <main id="main">{children}</main>
