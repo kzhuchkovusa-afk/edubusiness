@@ -1,33 +1,23 @@
 import Link from 'next/link';
 import Container from '@/components/shared/Container';
 import Logo from './Logo';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Twitter } from 'lucide-react';
 
 const cols = [
   {
-    heading: 'Programs',
+    heading: 'Explore',
     links: [
       { href: '/programs', label: 'All Programs' },
-      { href: '/programs/scratch', label: 'Scratch' },
-      { href: '/programs/python', label: 'Python' },
-      { href: '/programs/robotics', label: 'Robotics' },
+      { href: '/pricing', label: 'Pricing' },
+      { href: '/for-tutoring-centers', label: 'For Tutoring Centers' },
     ],
   },
   {
     heading: 'Company',
     links: [
       { href: '/about', label: 'About' },
-      { href: '/pricing', label: 'Pricing' },
       { href: '/contact', label: 'Contact' },
-    ],
-  },
-  {
-    heading: 'For Centers',
-    links: [
-      { href: '/for-tutoring-centers', label: 'Tutoring Centers' },
-      { href: '/', label: 'Language Schools (soon)' },
-      { href: '/', label: 'Math Centers (soon)' },
-      { href: '/', label: 'Blog (soon)' },
+      { href: '/contact?demo=true', label: 'Get a Free Demo Lesson' },
     ],
   },
 ];
@@ -36,13 +26,22 @@ export default function Footer() {
   return (
     <footer className="mt-10 border-t border-border bg-white">
       <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(3,1fr)]">
+        <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-text-muted">
-              Licensed STEM Curriculum for Afterschool Centers.
-              Affordable. Simple. Fast results.
+              Licensed STEM Curriculum for Afterschool Centers. Affordable.
+              Simple. Fast results.
             </p>
+            <a
+              href="https://gocoding.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              Part of the GoCoding network — gocoding.tech
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
             <div className="mt-5 flex gap-3 text-text-muted">
               <a aria-label="LinkedIn" href="#" className="hover:text-text">
                 <Linkedin className="h-5 w-5" />
