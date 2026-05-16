@@ -7,6 +7,7 @@ import Button from '@/components/shared/Button';
 import StatCounter from '@/components/shared/StatCounter';
 import ProgramRoadmap from '@/components/home/ProgramRoadmap';
 import BusinessCalculator from '@/components/home/BusinessCalculator';
+import BestPriceGuarantee from '@/components/shared/BestPriceGuarantee';
 import {
   ArrowRight,
   Check,
@@ -348,7 +349,12 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Block 8 — Business models */}
+      {/* Block 8 — Best price guarantee */}
+      <Section tone="surface">
+        <BestPriceGuarantee />
+      </Section>
+
+      {/* Block 9 — Business models */}
       <Section>
         <div className="reveal max-w-3xl">
           <SectionHeading
@@ -418,7 +424,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Block 9 — Guarantee */}
+      {/* Block 10 — Guarantee */}
       <Section tone="surface">
         <div className="reveal mx-auto max-w-2xl text-center">
           <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-accent text-white">
@@ -438,7 +444,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Block 10 — Final CTA */}
+      {/* Block 11 — Final CTA */}
       <section id="final-cta" className="bg-bg py-16 sm:py-20 md:py-24">
         <Container>
           <div className="reveal mx-auto max-w-2xl rounded-3xl bg-primary p-10 text-center text-white shadow-card sm:p-14">
