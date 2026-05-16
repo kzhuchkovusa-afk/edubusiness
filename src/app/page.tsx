@@ -6,6 +6,7 @@ import SectionHeading from '@/components/shared/SectionHeading';
 import Button from '@/components/shared/Button';
 import StatCounter from '@/components/shared/StatCounter';
 import ProgramRoadmap from '@/components/home/ProgramRoadmap';
+import BusinessCalculator from '@/components/home/BusinessCalculator';
 import {
   ArrowRight,
   Check,
@@ -403,6 +404,9 @@ export default function HomePage() {
               <p className="mt-4 text-sm text-text-muted">{m.note}</p>
             </div>
           ))}
+        </div>
+        <div className="reveal mt-8">
+          <BusinessCalculator />
         </div>
         <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
           <p className="text-lg leading-relaxed">
