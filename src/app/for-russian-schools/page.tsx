@@ -6,6 +6,11 @@ import SectionHeading from '@/components/shared/SectionHeading';
 import Button from '@/components/shared/Button';
 import Badge from '@/components/shared/Badge';
 import LossCascade from '@/components/landing/LossCascade';
+import ProgramPathway from '@/components/landing/ProgramPathway';
+import WhatsIncluded from '@/components/landing/WhatsIncluded';
+import LandingFAQ from '@/components/landing/LandingFAQ';
+import Guarantees from '@/components/landing/Guarantees';
+import ThreePaths from '@/components/landing/ThreePaths';
 import { ArrowRight, Check, ShieldCheck, Sparkles } from 'lucide-react';
 
 const DEMO_HREF = '/contact?demo=true';
@@ -29,6 +34,29 @@ const proof = [
   { stat: '500+', label: 'учеников в сети GoCoding прямо сейчас' },
   { stat: '95%', label: 'остаются месяц за месяцем' },
   { stat: '2.5', label: 'года — средний срок, что ученик остаётся' },
+];
+
+const faqs = [
+  {
+    q: 'Мои учителя — филологи, не программисты. Справятся?',
+    a: 'If your teacher can read a recipe, they can teach this class. Every minute is scripted: say this, show this, give kids 8 minutes to work. No CS background needed — literally.',
+  },
+  {
+    q: 'А если дети заскучают через 3 месяца, как с шахматами?',
+    a: 'Each program is 36+ unique lessons for a full year. Kids build games in Roblox, code characters, design levels. After 3 months they are just getting warmed up — they have not even started multiplayer projects yet.',
+  },
+  {
+    q: '$40 в месяц — ещё одна статья расходов...',
+    a: 'One student enrolled in coding at $100/month covers the license in the first week. And one family that does not leave is $2,000+/year in tuition saved. The program pays for itself before you blink.',
+  },
+  {
+    q: 'Не потеряем ли мы идентичность русской школы?',
+    a: 'A Russian school offering 20 subjects to 350 students is more Russian than ever. Coding does not replace language — it gives families a reason to stay for language.',
+  },
+  {
+    q: 'Что если учитель уволится?',
+    a: 'The curriculum belongs to your school, not the teacher. A new hire reads the lesson plan, preps for 10 minutes, and teaches on day one. That is the whole point of scripted lessons.',
+  },
 ];
 
 export default function RussianSchoolsPage() {
@@ -64,7 +92,7 @@ export default function RussianSchoolsPage() {
         </Container>
       </section>
 
-      {/* Killer element — cascade */}
+      {/* Cascade */}
       <Section tone="surface">
         <div className="reveal max-w-3xl">
           <SectionHeading
@@ -96,6 +124,34 @@ export default function RussianSchoolsPage() {
               <span className="text-[15px] text-text/90">{p}</span>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Program Pathway */}
+      <Section tone="muted">
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="The pathway"
+            title="From age 4 to 12+. They never outgrow your school."
+            description="15 programs across three tracks. Every year a new level — so there's always a reason to stay."
+          />
+        </div>
+        <div className="reveal mt-10">
+          <ProgramPathway highlight={['roblox-build-code']} />
+        </div>
+      </Section>
+
+      {/* What's Included */}
+      <Section>
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="What you get"
+            title="Everything your teacher needs. Nothing else to buy."
+            description="Each $40/month program includes a full academic year of materials — ready to teach."
+          />
+        </div>
+        <div className="mt-10">
+          <WhatsIncluded />
         </div>
       </Section>
 
@@ -133,6 +189,34 @@ export default function RussianSchoolsPage() {
               <div className="mt-2 text-sm text-text-muted">{p.label}</div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section tone="muted">
+        <div className="reveal max-w-3xl">
+          <SectionHeading eyebrow="FAQ" title="Вопросы, которые вы зададите" />
+        </div>
+        <LandingFAQ faqs={faqs} />
+      </Section>
+
+      {/* Guarantees */}
+      <Section>
+        <div className="reveal max-w-3xl">
+          <SectionHeading eyebrow="Risk reversal" title="Zero risk. Seriously." />
+        </div>
+        <div className="mt-10">
+          <Guarantees />
+        </div>
+      </Section>
+
+      {/* Three Paths */}
+      <Section tone="muted">
+        <div className="reveal max-w-3xl">
+          <SectionHeading eyebrow="Your decision" title="You have three paths." />
+        </div>
+        <div className="reveal mt-10">
+          <ThreePaths />
         </div>
       </Section>
 

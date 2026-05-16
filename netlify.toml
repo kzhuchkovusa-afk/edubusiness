@@ -12,10 +12,7 @@
 # Set NEXT_PUBLIC_SITE_URL to your production domain in:
 #   Netlify dashboard → Site settings → Environment variables
 # Example: https://www.yourdomain.com
-
-# Static export already emits per-route index.html files; this keeps direct
-# visits and refreshes on nested routes working.
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+#
+# No catch-all redirect: the static export emits `404.html`, which Netlify
+# serves automatically for unmatched routes. A catch-all `/*` redirect would
+# also intercept Netlify Forms POST submissions and break the lead forms.

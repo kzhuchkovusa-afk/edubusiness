@@ -5,6 +5,10 @@ import SectionHeading from '@/components/shared/SectionHeading';
 import Button from '@/components/shared/Button';
 import Badge from '@/components/shared/Badge';
 import PilotForm from '@/components/landing/PilotForm';
+import ProgramPathway from '@/components/landing/ProgramPathway';
+import WhatsIncluded from '@/components/landing/WhatsIncluded';
+import LandingFAQ from '@/components/landing/LandingFAQ';
+import Guarantees from '@/components/landing/Guarantees';
 import { ArrowRight, Check, Heart, Quote, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -26,6 +30,29 @@ const productPoints = [
   'Just one. We will not hand you 15 options to sort through.',
   'Scripted lesson plans, homework, assessments, parent updates — all included.',
   'After the pilot: $40/month for the program. Month to month, no contract.',
+];
+
+const faqs = [
+  {
+    q: 'Will coding take away from Korean language time?',
+    a: 'Not at all. The coding class runs as a separate enrichment block — after or alongside Korean. Think of it as an elective, not a replacement. Korean stays at the center.',
+  },
+  {
+    q: 'Our teachers are volunteers with no time for extra prep.',
+    a: '10 minutes — that is the prep time. The lesson plan tells your teacher exactly what to say and do, minute by minute. No CS background, no extra training.',
+  },
+  {
+    q: 'Is $40/month realistic for our budget?',
+    a: 'If coding keeps even 3 families who were about to leave, that is $900–$1,800/year in saved tuition. The program costs $480/year. It is retention insurance — and it pays for itself.',
+  },
+  {
+    q: 'I don’t want kids staring at screens for 90 minutes.',
+    a: 'Neither do we. Lessons alternate between instruction, hands-on coding, pair work, and presentations. Robotics is fully physical — building with real kits. Screen time is active, not passive.',
+  },
+  {
+    q: 'Are other Korean schools doing this?',
+    a: 'Heritage schools across communities are adding STEM enrichment. We are building this pilot specifically for Korean schools, and we would love yours to be one of the first case studies.',
+  },
 ];
 
 export default function KoreanSchoolsPage() {
@@ -101,7 +128,7 @@ export default function KoreanSchoolsPage() {
         </div>
       </Section>
 
-      {/* Product */}
+      {/* Product — start small */}
       <Section>
         <div className="reveal max-w-3xl">
           <SectionHeading
@@ -119,6 +146,34 @@ export default function KoreanSchoolsPage() {
               <span className="text-[15px] text-text/90">{p}</span>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Program Pathway */}
+      <Section tone="muted">
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="The pathway"
+            title="From age 4 to 12+. They never outgrow your school."
+            description="15 programs across three tracks. Every year a new level — so there's always a reason to stay."
+          />
+        </div>
+        <div className="reveal mt-10">
+          <ProgramPathway highlight={['minecraft-coding-ai', 'roblox-build-code']} />
+        </div>
+      </Section>
+
+      {/* What's Included */}
+      <Section>
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="What you get"
+            title="Everything your teacher needs. Nothing else to buy."
+            description="Each $40/month program includes a full academic year of materials — ready to teach."
+          />
+        </div>
+        <div className="mt-10">
+          <WhatsIncluded />
         </div>
       </Section>
 
@@ -141,6 +196,27 @@ export default function KoreanSchoolsPage() {
         </div>
       </Section>
 
+      {/* FAQ */}
+      <Section>
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="FAQ"
+            title="Questions we hear from Korean school principals"
+          />
+        </div>
+        <LandingFAQ faqs={faqs} />
+      </Section>
+
+      {/* Guarantees */}
+      <Section tone="muted">
+        <div className="reveal max-w-3xl">
+          <SectionHeading eyebrow="Risk reversal" title="Zero risk. Seriously." />
+        </div>
+        <div className="mt-10">
+          <Guarantees />
+        </div>
+      </Section>
+
       {/* Endorsement placeholder */}
       <Section>
         <div className="reveal mx-auto max-w-3xl rounded-2xl border border-dashed border-border bg-bg p-6 text-center">
@@ -154,7 +230,10 @@ export default function KoreanSchoolsPage() {
       </Section>
 
       {/* Pilot application form */}
-      <section id="pilot-application" className="scroll-mt-24 bg-bg py-16 sm:py-20 md:py-24">
+      <section
+        id="pilot-application"
+        className="scroll-mt-24 bg-bg py-16 sm:py-20 md:py-24"
+      >
         <Container>
           <div className="reveal mx-auto max-w-2xl">
             <div className="text-center">
