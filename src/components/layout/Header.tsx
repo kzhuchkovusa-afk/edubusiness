@@ -9,8 +9,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="/" aria-label="GoCoding home" className="flex items-center gap-2">
-          <Logo />
+        <Link href="/" aria-label="GoCoding home" className="flex items-center">
+          <Logo withTagline />
         </Link>
 
         <div className="hidden md:block">

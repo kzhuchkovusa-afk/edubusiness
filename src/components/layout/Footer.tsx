@@ -28,10 +28,10 @@ export default function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
           <div>
-            <Logo />
+            <Logo withTagline />
             <p className="mt-4 max-w-xs text-sm text-text-muted">
-              Licensed STEM Curriculum for Afterschool Centers. Affordable.
-              Simple. Fast results.
+              Licensed STEM curriculum for independent afterschool and tutoring
+              centers.
             </p>
             <a
               href="https://gocoding.tech"

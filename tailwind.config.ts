@@ -28,6 +28,7 @@ const config: Config = {
         heading: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-jetbrains)', 'ui-monospace', 'monospace'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
       maxWidth: {
         container: '1200px',
