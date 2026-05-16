@@ -3,7 +3,6 @@ import scratch from '@/content/programs/scratch.json';
 import python from '@/content/programs/python.json';
 import robotics from '@/content/programs/robotics.json';
 import company from '@/content/shared/company.json';
-import pricing from '@/content/shared/pricing.json';
 
 export type LandingContent = typeof tutoringCenters;
 
@@ -29,4 +28,3 @@ export function getProgramSlugs(): ProgramSlug[] {
 }
 
 export const companyContent = company;
-export const pricingContent = pricing;
