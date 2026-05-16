@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
   { href: '/for-tutoring-centers', label: 'For Tutoring Centers' },
+  { href: '/for-coding-centers', label: 'For Coding Centers' },
 ];
 
 export default function Navigation({ onLinkClick }: { onLinkClick?: () => void }) {
