@@ -6,6 +6,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     '/',
     '/for-tutoring-centers',
+    '/for-language-schools',
+    '/for-chinese-schools',
+    '/for-russian-schools',
+    '/for-korean-schools',
     '/programs',
     '/pricing',
     '/about',
