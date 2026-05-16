@@ -1,0 +1,186 @@
+{
+  "ageBands": ["4–5", "5–6", "7–8", "9–10", "11+", "12+"],
+  "comingSoon": [{ "trackId": "creativity", "row": 3 }],
+  "tracks": [
+    {
+      "id": "coding",
+      "name": "Coding",
+      "tone": "primary",
+      "headline": "From visual blocks to Python. Ages 5–12+.",
+      "subtitle": "7 programs that take kids from their first drag-and-drop to writing real code.",
+      "programs": [
+        {
+          "slug": "first-steps-coding",
+          "name": "First Steps in Coding (ScratchJr & Tynker)",
+          "ages": "Ages 5–6",
+          "level": "Beginner",
+          "matrixRows": [1],
+          "description": "Visual block-based coding for the youngest coders. Kids create animations, stories, and simple games — the perfect first step into the world of programming.",
+          "equipment": "Any tablet or laptop"
+        },
+        {
+          "slug": "minecraft-coding-ai",
+          "name": "Coding and AI in Minecraft",
+          "ages": "Ages 7–8",
+          "level": "Beginner–Intermediate",
+          "matrixRows": [2],
+          "description": "Kids learn coding by building and modding in the world they already love. Introduces AI concepts naturally through Minecraft's environment.",
+          "equipment": "Laptop with Minecraft (Education or Java edition)"
+        },
+        {
+          "slug": "delightrex-3d-worlds",
+          "name": "Create 3D Worlds in Delightrex",
+          "ages": "Ages 9–10",
+          "level": "Intermediate",
+          "matrixRows": [3],
+          "description": "3D world-building and game design. Kids create immersive environments while learning intermediate programming logic and spatial thinking.",
+          "equipment": "Laptop with browser"
+        },
+        {
+          "slug": "roblox-build-code",
+          "name": "Build & Code in Roblox",
+          "ages": "Ages 11+",
+          "level": "Intermediate–Advanced",
+          "matrixRows": [4],
+          "description": "Game development on Roblox using Lua scripting. Kids build, publish, and share their own multiplayer games with real players.",
+          "equipment": "Laptop (Windows/Mac)"
+        },
+        {
+          "slug": "python-coding",
+          "name": "Python Coding",
+          "ages": "Ages 12+",
+          "level": "Advanced",
+          "matrixRows": [5],
+          "description": "Text-based programming with Python — the language used at Google, NASA, and Netflix. Real projects, real problem-solving, real skills.",
+          "equipment": "Laptop with Python installed"
+        },
+        {
+          "slug": "unity-3d-game-studio",
+          "name": "Unity 3D Game Studio",
+          "ages": "Ages 12+",
+          "level": "Advanced",
+          "matrixRows": [5],
+          "description": "Professional game development using the Unity engine and C#. Kids create 3D games from scratch — the same tools used by real studios.",
+          "equipment": "Laptop (Windows/Mac) with Unity installed"
+        },
+        {
+          "slug": "3d-modeling",
+          "name": "3D Modeling",
+          "ages": "Ages 12+",
+          "level": "Advanced",
+          "matrixRows": [5],
+          "description": "Digital 3D design and modeling. Skills applicable to gaming, architecture, product design, and animation — a creative-technical hybrid.",
+          "equipment": "Laptop with 3D software"
+        }
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "tone": "warning",
+      "headline": "From screen-free robots to Arduino circuits. Ages 4–12+.",
+      "subtitle": "7 programs that take kids from their first robot to real electronics and physics.",
+      "programs": [
+        {
+          "slug": "first-robotics-qobo",
+          "name": "First Robotics with Qobo",
+          "ages": "Ages 4–5",
+          "level": "Beginner",
+          "matrixRows": [0],
+          "description": "Screen-free robotics for the youngest learners. Hands-on play with Qobo robots introduces sequencing, logic, and cause-and-effect — no screens needed.",
+          "equipment": "Qobo robot kit (~$70–100)"
+        },
+        {
+          "slug": "smart-robotics-kids",
+          "name": "Smart Robotics for Kids",
+          "ages": "Age 6",
+          "level": "Beginner",
+          "matrixRows": [1],
+          "description": "Building and programming simple robots. Sensors, motors, and basic logic — everything is hands-on and tactile.",
+          "equipment": "Robotics kit (~$80–150)"
+        },
+        {
+          "slug": "mechanical-robotics-lab",
+          "name": "Mechanical Robotics Lab",
+          "ages": "Ages 7–8",
+          "level": "Intermediate",
+          "matrixRows": [2],
+          "description": "Engineering meets coding. Kids build mechanical systems — gears, levers, motors — then program their creations to move and respond.",
+          "equipment": "Mechanical robotics kit (~$100–200)"
+        },
+        {
+          "slug": "essential-robotics-skills",
+          "name": "Essential Robotics Skills",
+          "ages": "Ages 9–10",
+          "level": "Intermediate",
+          "matrixRows": [3],
+          "description": "Core robotics competencies: sensor integration, autonomous movement, and complex problem-solving through building and coding.",
+          "equipment": "Robotics kit (~$150–250)"
+        },
+        {
+          "slug": "robotics-prime",
+          "name": "Robotics Prime",
+          "ages": "Ages 11+",
+          "level": "Advanced",
+          "matrixRows": [4],
+          "description": "Advanced robotics with complex builds and sophisticated programming. Prepares kids for competitions and real-world engineering challenges.",
+          "equipment": "Advanced robotics kit (~$200–350)"
+        },
+        {
+          "slug": "physics-in-robotics",
+          "name": "Physics in Robotics",
+          "ages": "Ages 12+",
+          "level": "Advanced",
+          "matrixRows": [5],
+          "description": "Applies physics principles — force, motion, energy — through robotics projects. Science, engineering, and coding in one program.",
+          "equipment": "Advanced robotics kit (~$200–350)"
+        },
+        {
+          "slug": "arduino-robotics-circuits",
+          "name": "Arduino Robotics & Circuits",
+          "ages": "Ages 12+",
+          "level": "Advanced",
+          "matrixRows": [5],
+          "description": "Real electronics: Arduino microcontrollers, circuits, sensors, actuators. The bridge from educational robotics to real engineering.",
+          "equipment": "Arduino starter kit (~$70–150)"
+        }
+      ]
+    },
+    {
+      "id": "creativity",
+      "name": "Creativity",
+      "tone": "accent",
+      "headline": "Digital art from finger painting to professional illustration. Ages 4–11+.",
+      "subtitle": "Creative-technical programs that bridge art and technology.",
+      "programs": [
+        {
+          "slug": "digital-art-for-kids",
+          "name": "Digital Art for Kids",
+          "ages": "Ages 4–6",
+          "level": "Beginner",
+          "matrixRows": [0, 1],
+          "description": "Introduction to digital drawing and creative expression. Kids explore color, shape, and composition using kid-friendly digital tools.",
+          "equipment": "Tablet with drawing app"
+        },
+        {
+          "slug": "digital-drawing-pro",
+          "name": "Digital Drawing Pro",
+          "ages": "Ages 7–8",
+          "level": "Intermediate",
+          "matrixRows": [2],
+          "description": "Intermediate digital art: techniques, composition, and digital painting. Kids develop a personal style while learning professional techniques.",
+          "equipment": "Tablet with drawing app"
+        },
+        {
+          "slug": "digital-illustration-procreate",
+          "name": "Digital Illustration with Procreate",
+          "ages": "Ages 11+",
+          "level": "Advanced",
+          "matrixRows": [4],
+          "description": "Professional-level digital illustration using Procreate. Portfolio-ready skills that open doors to design, animation, and art careers.",
+          "equipment": "iPad with Procreate app"
+        }
+      ]
+    }
+  ]
+}
