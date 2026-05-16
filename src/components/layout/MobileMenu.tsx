@@ -54,12 +54,9 @@ export default function MobileMenu() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-4 flex flex-col gap-3">
-              <Button href="/contact" variant="primary" size="lg">
-                Book a Zoom
-              </Button>
-              <Button href="/contact?demo=true" variant="outline" size="lg">
-                Get Demo Lesson
+            <div className="mt-4">
+              <Button href="/contact?demo=true" variant="primary" size="lg">
+                Get a Free Demo Lesson
               </Button>
             </div>
           </nav>
