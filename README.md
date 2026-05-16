@@ -4,6 +4,8 @@ A modern marketing website for **GoCoding** — a company that licenses ready-ma
 
 > **Status:** MVP Phase 1. Priority landing page (`/for-tutoring-centers`) plus programs, pricing, about, contact, homepage.
 
+> 🗺️ **Maintaining the site? Start with [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** — the full site map, route list, component catalog, content/forms layout, and conventions.
+
 ## Tech stack
 
 | | |
