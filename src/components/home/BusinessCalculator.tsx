@@ -10,17 +10,20 @@ const money = (n: number) =>
 
 export default function BusinessCalculator() {
   const [price, setPrice] = useState(150);
-  const [students, setStudents] = useState(6);
+  const [perGroup, setPerGroup] = useState(6);
+  const [groups, setGroups] = useState(1);
   const [teacherRate, setTeacherRate] = useState(25);
   const [venueRate, setVenueRate] = useState(20);
   const [other, setOther] = useState(0);
 
-  const revenue = price * students;
-  const teacher = teacherRate * HOURS_PER_MONTH;
-  const venue = venueRate * HOURS_PER_MONTH;
+  const revenue = price * perGroup * groups;
+  const teacher = teacherRate * HOURS_PER_MONTH * groups;
+  const venue = venueRate * HOURS_PER_MONTH * groups;
   const expenses = teacher + venue + LICENSE + other;
   const profit = revenue - expenses;
+  const annual = profit * 12;
   const margin = revenue > 0 ? Math.round((profit / revenue) * 100) : 0;
+  const groupWord = groups === 1 ? 'group' : 'groups';
 
   return (
     <div className="rounded-3xl border border-border bg-white p-6 shadow-card sm:p-8">
@@ -42,9 +45,14 @@ export default function BusinessCalculator() {
             onChange={setPrice}
           />
           <NumberField
-            label="Number of students"
-            value={students}
-            onChange={setStudents}
+            label="Students per group"
+            value={perGroup}
+            onChange={setPerGroup}
+          />
+          <NumberField
+            label="Number of groups"
+            value={groups}
+            onChange={setGroups}
           />
 
           <div className="pt-1 text-xs font-bold uppercase tracking-wider text-text-muted">
@@ -53,14 +61,14 @@ export default function BusinessCalculator() {
           <NumberField
             label="Teacher rate (per hour)"
             prefix="$"
-            hint="× 6 h/month"
+            hint="× 6 h/month × groups"
             value={teacherRate}
             onChange={setTeacherRate}
           />
           <NumberField
             label="Venue rent (per hour)"
             prefix="$"
-            hint="× 6 h/month"
+            hint="× 6 h/month × groups"
             value={venueRate}
             onChange={setVenueRate}
           />
@@ -76,37 +84,62 @@ export default function BusinessCalculator() {
         <div className="flex flex-col rounded-2xl bg-bg p-5 sm:p-6">
           <Row
             label="Monthly revenue"
-            sub={`${money(price)} × ${students} students`}
+            sub={`${money(price)} × ${perGroup} × ${groups} ${groupWord}`}
             value={money(revenue)}
           />
           <div className="my-3 border-t border-border" />
-          <Row label="Teacher" sub={`${money(teacherRate)} × 6 h`} value={'−' + money(teacher)} muted />
-          <Row label="Venue rent" sub={`${money(venueRate)} × 6 h`} value={'−' + money(venue)} muted />
-          <Row label="GoCoding license" value={'−' + money(LICENSE)} muted />
+          <Row
+            label="Teacher"
+            sub={`${money(teacherRate)} × 6 h × ${groups}`}
+            value={'−' + money(teacher)}
+            muted
+          />
+          <Row
+            label="Venue rent"
+            sub={`${money(venueRate)} × 6 h × ${groups}`}
+            value={'−' + money(venue)}
+            muted
+          />
+          <Row label="GoCoding license" sub="flat, any number of groups" value={'−' + money(LICENSE)} muted />
           {other > 0 && <Row label="Other costs" value={'−' + money(other)} muted />}
           <Row label="Total expenses" value={'−' + money(expenses)} />
           <div className="my-3 border-t border-border" />
-          <div className="mt-auto flex items-end justify-between gap-3 pt-2">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-wider text-text-muted">
-                Your monthly profit
+
+          <div className="mt-auto space-y-2 pt-2">
+            <div className="flex items-end justify-between gap-3">
+              <div>
+                <div className="text-sm font-bold uppercase tracking-wider text-text-muted">
+                  Monthly profit
+                </div>
+                <div className="text-xs text-text-muted">{margin}% margin</div>
               </div>
-              <div className="text-xs text-text-muted">{margin}% margin</div>
+              <div
+                className={`font-mono text-2xl font-extrabold ${
+                  profit >= 0 ? 'text-accent' : 'text-danger'
+                }`}
+              >
+                {money(profit)}
+              </div>
             </div>
-            <div
-              className={`font-mono text-3xl font-extrabold sm:text-4xl ${
-                profit >= 0 ? 'text-accent' : 'text-danger'
-              }`}
-            >
-              {money(profit)}
+            <div className="flex items-center justify-between gap-3 rounded-xl bg-accent/[0.08] px-4 py-3">
+              <span className="text-sm font-bold uppercase tracking-wider text-text">
+                Profit per year (× 12)
+              </span>
+              <span
+                className={`font-mono text-3xl font-extrabold sm:text-4xl ${
+                  annual >= 0 ? 'text-accent' : 'text-danger'
+                }`}
+              >
+                {money(annual)}
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <p className="mt-4 text-xs text-text-muted">
-        A rough estimate for one weekly group (6 teaching hours a month). Your
-        actual numbers will vary.
+        A rough estimate based on weekly groups (6 teaching hours per group per
+        month). Your actual numbers will vary.
       </p>
     </div>
   );

@@ -408,11 +408,12 @@ export default function HomePage() {
         <div className="reveal mt-8">
           <BusinessCalculator />
         </div>
-        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
-          <p className="text-lg leading-relaxed">
-            Even the worst case — one student in 1-on-1 lessons — already covers
-            the $40 license and puts money in your pocket. From there, growing
-            this direction is easy: add students, add a group, add a program.
+        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-6 text-white sm:px-8">
+          <p className="text-lg leading-relaxed sm:text-xl">
+            Getting into this business is about as easy as it gets, and the
+            effort is minimal. Every curriculum package also includes a complete
+            business-model playbook — which makes a strong result even more
+            likely.
           </p>
         </div>
       </Section>
