@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/for-tutoring-centers',
     '/for-coding-centers',
     '/for-language-schools',
+    '/for-spanish-schools',
     '/for-chinese-schools',
     '/for-russian-schools',
     '/for-korean-schools',

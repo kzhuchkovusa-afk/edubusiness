@@ -55,10 +55,11 @@ description, canonical, Open Graph).
 | `/contact` | `app/contact/page.tsx` | Booking page + free-summer-program offer | Renders `ContactForm` (Netlify form `call-booking`) |
 | `/for-tutoring-centers` | `app/for-tutoring-centers/page.tsx` | Landing — centers with **no** coding (LAUNCH framing) | **JSON-driven** — the only page rendered from `src/content/landing-pages/` |
 | `/for-coding-centers` | `app/for-coding-centers/page.tsx` | Landing — centers that **already** teach coding (UPGRADE framing), 14 sections | Inline content |
-| `/for-language-schools` | `app/for-language-schools/page.tsx` | Hub — compact router to the 3 community pages | No scroll; 3 cards |
+| `/for-language-schools` | `app/for-language-schools/page.tsx` | Hub — compact router to the 4 community pages | No scroll; 4 cards |
 | `/for-chinese-schools` | `app/for-chinese-schools/page.tsx` | Community landing — enrichment-block framing | Killer element: `EnrichmentCalculator` |
 | `/for-russian-schools` | `app/for-russian-schools/page.tsx` | Community landing — bilingual (RU headline / EN body) | Killer element: `LossCascade` |
 | `/for-korean-schools` | `app/for-korean-schools/page.tsx` | Community landing — pilot-program framing | Converter: `PilotForm` (Netlify form `korean-pilot`) |
+| `/for-spanish-schools` | `app/for-spanish-schools/page.tsx` | Community landing — Spanish afterschool/immersion, "3rd-grade bridge" framing | Converter: `SpanishDemoForm` (Netlify form `spanish-demo`) |
 
 Non-page routes in `src/app/`:
 
@@ -157,6 +158,7 @@ public/
 | `EnrichmentCalculator` (c) | Revenue calculator | chinese |
 | `LossCascade` | "Каскад потери" infographic | russian |
 | `PilotForm` (c) | Korean pilot application form (`korean-pilot`) | korean |
+| `SpanishDemoForm` (c) | Spanish demo-lesson request form (`spanish-demo`) | spanish |
 
 > Note: `SolutionSection`, `SocialProof`, `BenefitsSection`, `WhatYouGet`, `CTASection`
 > are prop-driven and are also reused by `/for-coding-centers` with inline data.
@@ -208,6 +210,7 @@ Two lead forms, both submitted via AJAX, no backend:
 |---|---|---|
 | `call-booking` | `ContactForm` | `/contact` |
 | `korean-pilot` | `PilotForm` | `/for-korean-schools` |
+| `spanish-demo` | `SpanishDemoForm` | `/for-spanish-schools` |
 
 **How detection works:** Netlify scans deployed HTML for forms. `public/__forms.html`
 holds a hidden static copy of every form so Netlify reliably registers them. **When you

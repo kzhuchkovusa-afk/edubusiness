@@ -33,6 +33,13 @@ const communities = [
     title: 'Korean schools',
     desc: 'NAKS Saturday schools. Join a low-risk STEM pilot built for community schools.',
   },
+  {
+    href: '/for-spanish-schools',
+    mark: 'ES',
+    tone: 'bg-warning',
+    title: 'Spanish schools',
+    desc: 'Spanish afterschool & immersion programs. Keep families past 3rd grade.',
+  },
 ];
 
 export default function LanguageSchoolsHub() {
@@ -52,7 +59,7 @@ export default function LanguageSchoolsHub() {
           </p>
         </div>
 
-        <div className="reveal mt-10 grid gap-5 md:grid-cols-3">
+        <div className="reveal mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {communities.map((c) => (
             <Link
               key={c.href}
