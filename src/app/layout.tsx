@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { DM_Sans, Lora, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -25,6 +25,13 @@ const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains',
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['500', '600'],
   display: 'swap',
 });
 
@@ -66,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable}`}
+      className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable} ${lora.variable}`}
     >
       <head>
         <noscript>
