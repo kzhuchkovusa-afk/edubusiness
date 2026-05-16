@@ -15,6 +15,7 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const DEMO_HREF = '/contact?demo=true';
 const DEMO_LABEL = 'Get a Free Demo Lesson';
@@ -93,6 +94,45 @@ const guaranteeLines = [
   'If it does — subscribe for $40/month and cancel anytime.',
 ];
 
+const businessModels = [
+  {
+    tag: 'Worst case — still profitable',
+    highlight: true,
+    title: 'One student, 1-on-1',
+    scenario: 'You enroll a single child in individual lessons.',
+    inLabel: 'The parent pays you',
+    inValue: '$150/mo',
+    outLabel: 'GoCoding license',
+    outValue: '−$40/mo',
+    keep: '$110/mo',
+    note: 'One student and the license is already paid for. This is the floor — and it still works.',
+  },
+  {
+    tag: 'Step up',
+    highlight: false,
+    title: 'One small group',
+    scenario: 'A weekly group of 6 students.',
+    inLabel: 'Revenue — 6 × $150',
+    inValue: '$900/mo',
+    outLabel: 'License + teacher',
+    outValue: '−$240/mo',
+    keep: '$660/mo',
+    note: 'One group, once a week — on the room and staff you already have.',
+  },
+  {
+    tag: 'Full direction',
+    highlight: false,
+    title: 'Three groups running',
+    scenario: 'Three weekly groups — a real STEM department.',
+    inLabel: 'Revenue — 18 × $150',
+    inValue: '$2,700/mo',
+    outLabel: 'License + teachers',
+    outValue: '−$640/mo',
+    keep: '~$2,060/mo',
+    note: 'Same $40 license. Add more programs and you reach $3–5K/month.',
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -103,7 +143,7 @@ export default function HomePage() {
           <div className="reveal mx-auto max-w-3xl">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
               <Sparkles className="h-3.5 w-3.5" />
-              15+ programs · Ages 4–12+ · Coding, Robotics &amp; Digital Art
+              16 programs · Ages 4–12+ · Coding · Robotics · Art · Science
             </span>
             <h1 className="mt-5 text-[32px] font-extrabold leading-tight sm:text-5xl md:text-[56px] md:leading-[1.07]">
               Ready-made STEM lessons your teachers can run tomorrow. $40/month.
@@ -215,12 +255,19 @@ export default function HomePage() {
         <div className="reveal max-w-3xl">
           <SectionHeading
             eyebrow="The programs"
-            title="15+ programs. Three tracks. Ages 4 to 12+."
-            description="Each program is one full academic year — all battle-tested and proven in real classrooms."
+            title="16 programs. Four tracks. Ages 4 to 12+."
+            description="Coding, Robotics, Creativity and Science — each program is one full academic year, battle-tested and proven in real classrooms."
           />
         </div>
         <div className="reveal mt-10">
           <ProgramRoadmap />
+        </div>
+        <div className="reveal mt-6 rounded-2xl border border-accent/30 bg-accent/[0.06] p-5 sm:p-6">
+          <p className="text-[15px] font-semibold text-text sm:text-base">
+            Every program is complete and ready to teach from day one — lesson
+            plans, student materials, homework, assessments, progress tracking
+            and a built-in trial lesson are all included. Open it and start.
+          </p>
         </div>
         <div className="reveal mt-8">
           <Link
@@ -300,7 +347,73 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Block 8 — Guarantee */}
+      {/* Block 8 — Business models */}
+      <Section>
+        <div className="reveal max-w-3xl">
+          <SectionHeading
+            eyebrow="Your numbers"
+            title="Three ways to run it. Every one pays off."
+            description="Start with a single student or a full schedule — here is the simple math behind each."
+          />
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {businessModels.map((m, i) => (
+            <div
+              key={m.title}
+              className={cn(
+                'reveal flex flex-col rounded-2xl border bg-surface p-6 shadow-card',
+                m.highlight ? 'border-accent ring-1 ring-accent/30' : 'border-border',
+              )}
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <span
+                className={cn(
+                  'inline-block w-fit rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider',
+                  m.highlight
+                    ? 'bg-accent/15 text-accent'
+                    : 'bg-black/5 text-text-muted',
+                )}
+              >
+                {m.tag}
+              </span>
+              <h3 className="mt-4 text-lg font-bold">{m.title}</h3>
+              <p className="mt-1 text-[15px] text-text-muted">{m.scenario}</p>
+              <div className="mt-5 space-y-2 border-t border-border pt-5 text-[15px]">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-text-muted">{m.inLabel}</span>
+                  <span className="font-mono font-semibold text-text">
+                    {m.inValue}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-text-muted">{m.outLabel}</span>
+                  <span className="font-mono font-semibold text-danger">
+                    {m.outValue}
+                  </span>
+                </div>
+              </div>
+              <div className="mt-4 flex items-center justify-between gap-3 rounded-xl bg-accent/[0.08] px-4 py-3">
+                <span className="text-sm font-semibold uppercase tracking-wider text-text">
+                  You keep
+                </span>
+                <span className="font-mono text-xl font-extrabold text-accent">
+                  {m.keep}
+                </span>
+              </div>
+              <p className="mt-4 text-sm text-text-muted">{m.note}</p>
+            </div>
+          ))}
+        </div>
+        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+          <p className="text-lg leading-relaxed">
+            Even the worst case — one student in 1-on-1 lessons — already covers
+            the $40 license and puts money in your pocket. From there, growing
+            this direction is easy: add students, add a group, add a program.
+          </p>
+        </div>
+      </Section>
+
+      {/* Block 9 — Guarantee */}
       <Section tone="surface">
         <div className="reveal mx-auto max-w-2xl text-center">
           <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-accent text-white">
@@ -320,7 +433,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Block 9 — Final CTA */}
+      {/* Block 10 — Final CTA */}
       <section id="final-cta" className="bg-bg py-16 sm:py-20 md:py-24">
         <Container>
           <div className="reveal mx-auto max-w-2xl rounded-3xl bg-primary p-10 text-center text-white shadow-card sm:p-14">

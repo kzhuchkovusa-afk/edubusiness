@@ -13,9 +13,9 @@ const headerTone: Record<Tone, string> = {
 };
 
 const cellTone: Record<Tone, string> = {
-  primary: 'bg-primary/[0.07] text-text',
-  warning: 'bg-warning/10 text-text',
-  accent: 'bg-accent/[0.08] text-text',
+  primary: 'bg-primary/[0.07]',
+  warning: 'bg-warning/10',
+  accent: 'bg-accent/[0.08]',
 };
 
 const tabTone: Record<Tone, string> = {
@@ -24,27 +24,51 @@ const tabTone: Record<Tone, string> = {
   accent: 'bg-accent text-white',
 };
 
-const { ageBands, tracks } = matrix as {
+const { ageBands, tracks, science } = matrix as {
   ageBands: string[];
   tracks: { name: string; tone: Tone; programs: string[] }[];
+  science: { name: string; programs: { name: string; ages: string }[] };
 };
 
 function Cell({ program, tone }: { program: string; tone: Tone }) {
   if (!program) {
     return (
-      <div className="flex min-h-[56px] items-center justify-center rounded-xl border border-dashed border-border bg-bg text-text-muted/50">
+      <div className="flex min-h-[76px] items-center justify-center rounded-xl border border-dashed border-border bg-bg text-text-muted/50">
         —
       </div>
     );
   }
+  const parts = program.split(';').map((p) => p.trim());
   return (
     <div
       className={cn(
-        'flex min-h-[56px] items-center justify-center rounded-xl px-3 text-center text-sm font-semibold',
+        'flex min-h-[76px] flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-2 text-center text-text',
         cellTone[tone],
       )}
     >
-      {program}
+      {parts.map((p, i) => (
+        <span key={i} className="text-xs font-semibold leading-tight sm:text-[13px]">
+          {p}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function ScienceBlock() {
+  return (
+    <div className="mt-6 rounded-2xl border border-border bg-bg p-5 sm:p-6">
+      <div className="mb-3 inline-block rounded-lg bg-text px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+        {science.name}
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {science.programs.map((p) => (
+          <div key={p.name} className="rounded-xl border border-border bg-white p-4">
+            <div className="font-bold">{p.name}</div>
+            <div className="mt-0.5 text-sm text-text-muted">{p.ages}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -97,9 +121,7 @@ export default function ProgramRoadmap() {
               onClick={() => setActiveTab(i)}
               className={cn(
                 'flex-1 rounded-lg py-2 text-sm font-bold transition-colors',
-                i === activeTab
-                  ? tabTone[track.tone]
-                  : 'bg-black/5 text-text-muted',
+                i === activeTab ? tabTone[track.tone] : 'bg-black/5 text-text-muted',
               )}
             >
               {track.name}
@@ -122,6 +144,8 @@ export default function ProgramRoadmap() {
           ))}
         </div>
       </div>
+
+      <ScienceBlock />
     </div>
   );
 }
