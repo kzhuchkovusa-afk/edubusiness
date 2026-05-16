@@ -17,12 +17,9 @@ export default function Header() {
           <Navigation />
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <Button href="/contact?demo=true" variant="outline" size="sm">
-            Get Demo
-          </Button>
-          <Button href="/contact" variant="primary" size="sm">
-            Book a Zoom
+        <div className="hidden md:block">
+          <Button href="/contact?demo=true" variant="primary" size="sm">
+            Get a Free Demo Lesson
           </Button>
         </div>
 
