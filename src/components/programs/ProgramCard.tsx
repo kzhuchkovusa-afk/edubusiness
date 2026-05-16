@@ -1,47 +1,51 @@
-import Link from 'next/link';
 import Badge from '@/components/shared/Badge';
-import { ArrowRight } from 'lucide-react';
+import Button from '@/components/shared/Button';
+import { ArrowRight, Wrench } from 'lucide-react';
+
+type Tone = 'primary' | 'warning' | 'accent';
 
 type Props = {
   slug: string;
   name: string;
-  ageRange: string;
+  ages: string;
   level: string;
-  lessons: number;
-  tagline: string;
-};
-
-const levelTone: Record<string, 'primary' | 'accent' | 'warning'> = {
-  Beginner: 'primary',
-  Intermediate: 'accent',
-  Advanced: 'warning',
+  description: string;
+  equipment: string;
+  tone: Tone;
 };
 
 export default function ProgramCard({
   slug,
   name,
-  ageRange,
+  ages,
   level,
-  lessons,
-  tagline,
+  description,
+  equipment,
+  tone,
 }: Props) {
   return (
-    <Link
-      href={`/programs/${slug}`}
-      className="reveal group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 shadow-card transition-shadow hover:shadow-card-hover"
+    <div
+      id={`prog-${slug}`}
+      className="scroll-mt-36 rounded-2xl border border-border bg-surface p-6 shadow-card sm:p-7"
     >
-      <div className="flex items-center justify-between gap-3">
-        <Badge tone={levelTone[level] ?? 'primary'}>{level}</Badge>
-        <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
-          {lessons} lessons
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge tone={tone}>{level}</Badge>
+        <Badge tone="neutral">{ages}</Badge>
+        <Badge tone="neutral">1 academic year</Badge>
+      </div>
+      <h3 className="mt-4 text-xl font-bold">{name}</h3>
+      <p className="mt-2 text-[15px] text-text-muted">{description}</p>
+      <div className="mt-4 flex items-start gap-2 rounded-xl bg-bg p-3 text-sm">
+        <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-text-muted" />
+        <span>
+          <span className="font-semibold">Equipment:</span> {equipment}
         </span>
       </div>
-      <h3 className="mt-5 text-xl font-bold">{name}</h3>
-      <div className="mt-1 text-sm text-text-muted">{ageRange}</div>
-      <p className="mt-4 text-[15px] text-text/80">{tagline}</p>
-      <div className="mt-auto pt-6 text-sm font-semibold text-primary group-hover:underline">
-        Learn more <ArrowRight className="ml-1 inline h-4 w-4" />
+      <div className="mt-5">
+        <Button href="/contact?demo=true" variant="outline" size="sm">
+          Get a demo lesson for this program <ArrowRight className="h-4 w-4" />
+        </Button>
       </div>
-    </Link>
+    </div>
   );
 }

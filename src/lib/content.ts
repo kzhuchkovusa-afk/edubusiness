@@ -1,5 +1,4 @@
 import tutoringCenters from '@/content/landing-pages/tutoring-centers.json';
-import programsIndex from '@/content/programs/index.json';
 import scratch from '@/content/programs/scratch.json';
 import python from '@/content/programs/python.json';
 import robotics from '@/content/programs/robotics.json';
@@ -29,6 +28,5 @@ export function getProgramSlugs(): ProgramSlug[] {
   return Object.keys(programs) as ProgramSlug[];
 }
 
-export const programsList = programsIndex;
 export const companyContent = company;
 export const pricingContent = pricing;
