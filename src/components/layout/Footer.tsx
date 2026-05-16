@@ -10,6 +10,7 @@ const cols = [
       { href: '/programs', label: 'All Programs' },
       { href: '/pricing', label: 'Pricing' },
       { href: '/for-tutoring-centers', label: 'For Tutoring Centers' },
+      { href: '/for-language-schools', label: 'For Language Schools' },
     ],
   },
   {
