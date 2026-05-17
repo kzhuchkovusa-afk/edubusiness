@@ -301,7 +301,7 @@ export default function PricingPage() {
               One full academic year of STEM lessons. Every week. Every plan.
               Every material. No setup fee. No royalty. No contract.
             </p>
-            <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-card">
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-sm font-semibold shadow-card">
               <Coffee className="h-4 w-4 text-warning" />
               That is $1.11 per lesson plan. Less than a coffee.
             </p>
@@ -350,7 +350,7 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 rounded-xl bg-white p-4 text-sm text-text-muted">
+            <p className="mt-5 rounded-xl bg-surface p-4 text-sm text-text-muted">
               Total if purchased separately:{' '}
               <span className="font-semibold text-text">$1,500+</span> in
               business materials alone. You get it all for $40/month.
@@ -358,7 +358,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="reveal mt-8 rounded-2xl border border-border bg-white p-6 shadow-card sm:p-8">
+        <div className="reveal mt-8 rounded-2xl border border-border bg-surface p-6 shadow-card sm:p-8">
           <h3 className="text-lg font-bold">
             Let us count what $40 actually gets you
           </h3>
@@ -472,11 +472,11 @@ export default function PricingPage() {
           />
         </div>
 
-        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-white shadow-card">
+        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-surface shadow-card">
           <table className="w-full min-w-[820px] border-collapse text-left text-sm">
             <thead>
               <tr>
-                <th className="sticky left-0 z-10 bg-white px-4 py-3" />
+                <th className="sticky left-0 z-10 bg-surface px-4 py-3" />
                 {compareHeaders.map((h, i) => (
                   <th
                     key={h}
@@ -495,12 +495,12 @@ export default function PricingPage() {
               {compareRows.map((row, ri) => (
                 <tr
                   key={row.label}
-                  className={ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'}
+                  className={ri % 2 ? 'bg-ink' : 'bg-surface'}
                 >
                   <th
                     scope="row"
                     className={`sticky left-0 z-10 px-4 py-3 text-left font-semibold ${
-                      ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'
+                      ri % 2 ? 'bg-ink' : 'bg-surface'
                     }`}
                   >
                     {row.label}
@@ -525,7 +525,7 @@ export default function PricingPage() {
           separately.
         </p>
 
-        <div className="reveal mt-8 rounded-2xl border border-border bg-white p-6 shadow-card sm:p-8">
+        <div className="reveal mt-8 rounded-2xl border border-border bg-surface p-6 shadow-card sm:p-8">
           <p className="text-[15px] leading-relaxed text-text/90">
             {compareNote}
           </p>
@@ -648,7 +648,7 @@ export default function PricingPage() {
           <SectionHeading eyebrow="Honest fit" title="Who this is for" />
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <div className="reveal rounded-2xl border border-accent/30 bg-white p-6 shadow-card">
+          <div className="reveal rounded-2xl border border-accent/30 bg-surface p-6 shadow-card">
             <h3 className="text-lg font-bold">This is for you if…</h3>
             <ul className="mt-4 space-y-3">
               {forYou.map((item) => (
@@ -659,7 +659,7 @@ export default function PricingPage() {
               ))}
             </ul>
           </div>
-          <div className="reveal rounded-2xl border border-border bg-white p-6 shadow-card">
+          <div className="reveal rounded-2xl border border-border bg-surface p-6 shadow-card">
             <h3 className="text-lg font-bold">This is NOT for you if…</h3>
             <ul className="mt-4 space-y-3">
               {notForYou.map((item) => (

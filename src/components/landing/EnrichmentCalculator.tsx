@@ -20,7 +20,7 @@ export default function EnrichmentCalculator() {
   const roi = monthlyCost > 0 ? monthlyRevenue / monthlyCost : 0;
 
   return (
-    <div className="rounded-3xl border border-border bg-white p-6 shadow-card sm:p-8">
+    <div className="rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8">
       <h3 className="text-xl font-bold sm:text-2xl">
         Enrichment Revenue Calculator
       </h3>
@@ -96,7 +96,7 @@ function Field({
         <span>{label}</span>
         {hint && <span className="font-normal text-text-muted">{hint}</span>}
       </span>
-      <div className="mt-1 flex items-center rounded-xl border border-border bg-white focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15">
+      <div className="mt-1 flex items-center rounded-xl border border-border bg-surface focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15">
         {prefix && <span className="pl-3 text-text-muted">{prefix}</span>}
         <input
           type="number"

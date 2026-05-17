@@ -157,7 +157,7 @@ export default function RussianSchoolsPage() {
 
       {/* Converter — the demo */}
       <Section tone="muted">
-        <div className="reveal mx-auto max-w-3xl rounded-3xl border border-border bg-white p-8 text-center shadow-card sm:p-10">
+        <div className="reveal mx-auto max-w-3xl rounded-3xl border border-border bg-surface p-8 text-center shadow-card sm:p-10">
           <h2 className="text-2xl font-bold sm:text-3xl">
             «Roblox за 60 минут» — бесплатный пробный урок
           </h2>

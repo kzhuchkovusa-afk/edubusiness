@@ -65,7 +65,7 @@ function ProgramTile({ program, tone }: { program: Program; tone: Tone }) {
     <a
       href={`#prog-${program.slug}`}
       className={cn(
-        'block rounded-xl border border-border bg-white px-3 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover',
+        'block rounded-xl border border-border bg-surface px-3 py-2.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover',
         hoverBorder[tone],
       )}
     >
@@ -147,7 +147,7 @@ export default function ProgramsMatrix() {
                 onClick={() => setTab(i)}
                 className={cn(
                   'flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-sm font-bold transition-colors',
-                  i === tab ? tabTone[track.tone] : 'bg-black/5 text-text-muted',
+                  i === tab ? tabTone[track.tone] : 'bg-white/8 text-text-muted',
                 )}
               >
                 <TrackIcon className="h-4 w-4" />

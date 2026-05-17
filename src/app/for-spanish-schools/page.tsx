@@ -332,11 +332,11 @@ export default function SpanishSchoolsPage() {
         <div className="reveal max-w-3xl">
           <SectionHeading eyebrow="Side by side" title="How GoCoding compares" />
         </div>
-        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-white shadow-card">
+        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-surface shadow-card">
           <table className="w-full min-w-[920px] border-collapse text-left text-sm">
             <thead>
               <tr>
-                <th className="sticky left-0 z-10 bg-white px-4 py-3" />
+                <th className="sticky left-0 z-10 bg-surface px-4 py-3" />
                 {compareHeaders.map((h, i) => (
                   <th
                     key={h}
@@ -352,12 +352,12 @@ export default function SpanishSchoolsPage() {
             </thead>
             <tbody>
               {compareRows.map((row, ri) => (
-                <tr key={row.label} className={ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'}>
+                <tr key={row.label} className={ri % 2 ? 'bg-ink' : 'bg-surface'}>
                   <th
                     scope="row"
                     className={cn(
                       'sticky left-0 z-10 px-4 py-3 text-left font-semibold',
-                      ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white',
+                      ri % 2 ? 'bg-ink' : 'bg-surface',
                     )}
                   >
                     {row.label}
@@ -396,7 +396,7 @@ export default function SpanishSchoolsPage() {
           ].map((s) => (
             <div
               key={s.label}
-              className="rounded-2xl border border-border bg-white p-6 shadow-card"
+              className="rounded-2xl border border-border bg-surface p-6 shadow-card"
             >
               <div className="font-heading text-4xl font-extrabold text-primary">
                 {s.stat}
@@ -509,7 +509,7 @@ export default function SpanishSchoolsPage() {
                 key={path.title}
                 className={cn(
                   'reveal flex flex-col rounded-2xl border p-6',
-                  path.tone === 'neutral' && 'border-border bg-[#F3F5F8]',
+                  path.tone === 'neutral' && 'border-border bg-white/[0.04]',
                   path.tone === 'warning' && 'border-warning/40 bg-warning/[0.08]',
                   recommended && 'border-2 border-accent bg-accent/[0.07] shadow-card',
                 )}

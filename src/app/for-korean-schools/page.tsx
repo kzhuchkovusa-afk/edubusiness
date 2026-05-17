@@ -117,7 +117,7 @@ export default function KoreanSchoolsPage() {
           {pilotSteps.map((s, i) => (
             <div
               key={s}
-              className="flex gap-4 rounded-2xl border border-border bg-white p-5 shadow-card"
+              className="flex gap-4 rounded-2xl border border-border bg-surface p-5 shadow-card"
             >
               <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent font-heading text-sm font-bold text-white">
                 {i + 1}

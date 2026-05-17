@@ -22,7 +22,7 @@ export default function BonusesSection({ title, items, total }: Props) {
         {items.map((it, i) => (
           <div
             key={it.title}
-            className="reveal flex gap-4 rounded-2xl border border-border bg-white p-6 shadow-card"
+            className="reveal flex gap-4 rounded-2xl border border-border bg-surface p-6 shadow-card"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-warning/15 text-warning">

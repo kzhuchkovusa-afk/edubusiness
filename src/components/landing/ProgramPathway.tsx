@@ -85,7 +85,7 @@ export default function ProgramPathway({
                     <div
                       className={cn(
                         'flex w-[170px] shrink-0 flex-col rounded-2xl border p-4',
-                        on ? onCard[track.tone] : `bg-white ${baseCard[track.tone]}`,
+                        on ? onCard[track.tone] : `bg-surface ${baseCard[track.tone]}`,
                       )}
                     >
                       <span

@@ -12,7 +12,7 @@ type Props = {
 const tones = {
   default: 'bg-bg',
   surface: 'bg-surface',
-  muted: 'bg-[#F3F5F8]',
+  muted: 'bg-white/[0.04]',
 };
 
 export default function Section({

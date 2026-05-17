@@ -20,7 +20,7 @@ export default function TrackNav() {
             <a
               key={l.href}
               href={l.href}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-white px-3 py-1.5 text-sm font-semibold text-text/80 transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 py-1.5 text-sm font-semibold text-text/80 transition-colors hover:border-primary hover:text-primary"
             >
               <l.icon className="h-4 w-4" />
               {l.label}

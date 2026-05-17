@@ -265,7 +265,7 @@ export default function AboutPage() {
           {whatIfs.map((w, i) => (
             <div
               key={w.q}
-              className="reveal rounded-2xl border border-border bg-white p-6 shadow-card"
+              className="reveal rounded-2xl border border-border bg-surface p-6 shadow-card"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="text-[15px] font-semibold text-text-muted">

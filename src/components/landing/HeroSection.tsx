@@ -76,13 +76,13 @@ export default function HeroSection({
 function HeroIllustration() {
   return (
     <div className="reveal relative mx-auto w-full max-w-md">
-      <div className="relative rounded-3xl border border-border bg-white p-6 shadow-card">
+      <div className="relative rounded-3xl border border-border bg-surface p-6 shadow-card">
         <div className="absolute -top-3 -left-3 rounded-xl bg-primary px-3 py-1 text-xs font-semibold text-white shadow-card">
           A parent's choice
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="flex min-h-[232px] flex-col justify-between gap-3 rounded-2xl bg-[#F3F5F8] p-4">
+          <div className="flex min-h-[232px] flex-col justify-between gap-3 rounded-2xl bg-white/[0.04] p-4">
             <div className="flex items-center gap-2 text-text-muted">
               <Building2 className="h-4 w-4" />
               <span className="text-xs font-semibold uppercase tracking-wider">
@@ -113,7 +113,7 @@ function HeroIllustration() {
           </div>
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl border border-border bg-white p-4 shadow-card">
+      <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface p-4 shadow-card">
         <div>
           <div className="text-xs font-semibold uppercase tracking-wider text-text-muted">
             With GoCoding
