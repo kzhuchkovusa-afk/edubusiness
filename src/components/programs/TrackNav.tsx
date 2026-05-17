@@ -10,7 +10,7 @@ const links = [
 
 export default function TrackNav() {
   return (
-    <div className="sticky top-16 z-30 border-b border-border bg-white/90 backdrop-blur">
+    <div className="sticky top-16 z-30 border-b border-white/8 bg-ink/90 backdrop-blur">
       <Container>
         <nav
           aria-label="Program tracks"
@@ -20,7 +20,7 @@ export default function TrackNav() {
             <a
               key={l.href}
               href={l.href}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 py-1.5 text-sm font-semibold text-text/80 transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-white/10 bg-ink-card px-3.5 py-1.5 text-sm font-semibold text-ink-muted transition-colors hover:border-cyan/50 hover:text-cyan"
             >
               <l.icon className="h-4 w-4" />
               {l.label}
