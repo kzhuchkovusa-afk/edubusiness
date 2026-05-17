@@ -75,10 +75,30 @@ const steps = [
 ];
 
 const stats = [
-  { value: '500+', label: 'Students learning now', cls: 'text-gradient' },
-  { value: '95%', label: 'Monthly retention', cls: 'text-gradient-green' },
-  { value: '2.5 yr', label: 'Average student lifetime', cls: 'text-gradient-warm' },
-  { value: '15+', label: 'Programs across 3 tracks', cls: 'text-gradient' },
+  {
+    value: '500+',
+    label: 'Students learning now',
+    cls: 'text-gradient',
+    card: 'border-brand/15 bg-brand/[0.06]',
+  },
+  {
+    value: '95%',
+    label: 'Monthly retention',
+    cls: 'text-gradient-green',
+    card: 'border-grass/20 bg-grass/[0.07]',
+  },
+  {
+    value: '2.5 yr',
+    label: 'Average student lifetime',
+    cls: 'text-gradient-warm',
+    card: 'border-flame/15 bg-flame/[0.06]',
+  },
+  {
+    value: '15+',
+    label: 'Programs across 3 tracks',
+    cls: 'text-gradient',
+    card: 'border-cyan/15 bg-cyan/[0.06]',
+  },
 ];
 
 const pricingFeatures = [
@@ -355,7 +375,7 @@ export default function HomePage() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="reveal rounded-2xl border border-black/5 bg-white p-7 text-center shadow-card"
+                className={`reveal rounded-2xl border p-7 text-center shadow-card ${s.card}`}
               >
                 <div className={`font-heading text-[44px] font-extrabold leading-none ${s.cls}`}>
                   {s.value}

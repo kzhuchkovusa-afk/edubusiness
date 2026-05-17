@@ -48,7 +48,7 @@ description, canonical, Open Graph).
 
 | URL | File | Purpose | Notable |
 |---|---|---|---|
-| `/` | `app/page.tsx` | Homepage — 11-block compact offer page | Inline content. Uses `ProgramRoadmap`, `BusinessCalculator`, `BestPriceGuarantee` |
+| `/` | `app/page.tsx` | Homepage — 12-block compact offer page | Inline content. Uses `HomeDemoForm`, `ProgramsTabs`, `BusinessCalculator` |
 | `/programs` | `app/programs/page.tsx` | Full program catalog — 8 sections, 3 tracks | Uses `ProgramsMatrix`, `ProgramCard`, `TrackNav`; content from `catalog.json` |
 | `/pricing` | `app/pricing/page.tsx` | Pricing — 11 sections, ROI scenarios, competitor table | Inline content |
 | `/about` | `app/about/page.tsx` | About — 8 sections, values manifesto | Inline content; uses the Lora serif font |
@@ -101,7 +101,7 @@ src/
     contact/                Contact form
   content/                  JSON content (see §5)
   lib/                      Helpers — content loader, site URL, cn()
-  styles/globals.css        Tailwind layers + CSS variables + .reveal
+  styles/globals.css        Tailwind layers + CSS variables + .reveal + dark utilities
 public/
   __forms.html              Hidden form definitions for Netlify (see §6)
   favicon.svg, images/      Static assets
@@ -131,14 +131,12 @@ public/
 | `Container` | Max-width (1200px) centered wrapper |
 | `Section` | Vertical-padded `<section>` + `Container`. Props: `tone` (`default`/`surface`/`muted`), `id` |
 | `SectionHeading` | Eyebrow + `<h2>` + description |
-| `Button` | Link or button. Variants `primary`/`outline`/`ghost`/`accent`; auto-detects external URLs |
+| `Button` | Link or button. Variants `primary`/`outline`/`ghost`/`accent`/`gradient`/`white`/`darkline`; pill radius; auto-detects external URLs |
 | `Badge` | Small pill label. Tones `primary`/`accent`/`warning`/`danger`/`neutral` |
-| `Card` | Bordered rounded card |
 | `Icon` | Maps a string name → a `lucide-react` icon (used by JSON-driven components) |
 | `StatCounter` (c) | Count-up number animation on scroll |
 | `RevealScript` (c) | Drives `.reveal` scroll animations; re-runs on route change |
-| `CTABanner` | Reusable gradient CTA strip |
-| `BestPriceGuarantee` | Best-price guarantee block — used on `/` and `/pricing` |
+| `BestPriceGuarantee` | Best-price guarantee block — used on `/pricing` |
 
 ### `components/landing/` — landing-page blocks
 
@@ -169,7 +167,8 @@ public/
 
 | Component | Purpose |
 |---|---|
-| `ProgramRoadmap` (c) | Homepage 4-track program matrix (incl. Science); mobile tabs |
+| `HomeDemoForm` (c) | Homepage demo-request form (Netlify form `homepage-demo`); `card`/`inline` variants |
+| `ProgramsTabs` (c) | Tabbed program preview (All/Coding/Robotics/Creativity), sourced from `catalog.json` |
 | `BusinessCalculator` (c) | Interactive profit calculator |
 
 ### `components/programs/` — `/programs` only
@@ -193,8 +192,7 @@ public/
 | File | Feeds | Notes |
 |---|---|---|
 | `landing-pages/tutoring-centers.json` | `/for-tutoring-centers` | Full 13-block copy. Loaded via `lib/content.ts` → `landingPages` |
-| `programs/catalog.json` | `/programs` | 17-program catalog, 3 tracks. Imported directly by `ProgramsMatrix` |
-| `home/program-matrix.json` | homepage `ProgramRoadmap` | 4-track matrix incl. Science |
+| `programs/catalog.json` | `/programs`, homepage `ProgramsTabs` | 17-program catalog, 3 tracks. Imported directly by the components |
 
 All other pages keep content **inline** as `const` arrays in the page file. There is no
 CMS — copy changes are code changes.
@@ -206,11 +204,12 @@ CMS — copy changes are code changes.
 
 ## 6. Forms (Netlify Forms)
 
-Two lead forms, both submitted via AJAX, no backend:
+Lead forms, all submitted via AJAX, no backend:
 
 | Form name | Component | Page |
 |---|---|---|
 | `call-booking` | `ContactForm` | `/contact` |
+| `homepage-demo` | `HomeDemoForm` | `/` |
 | `korean-pilot` | `PilotForm` | `/for-korean-schools` |
 | `spanish-demo` | `SpanishDemoForm` | `/for-spanish-schools` |
 | `afterschool-demo` | `AfterschoolDemoForm` | `/for-afterschool-centers` |
@@ -236,11 +235,10 @@ notifications → add an email notification per form.
 - **Reveal-on-scroll** — add the `.reveal` class to a block; `RevealScript` fades it in.
   It re-runs per route, so client-side navigation works.
 - **Section tones** — alternate `Section` `tone` (`default`/`surface`/`muted`) for rhythm.
-- **Colors** (Tailwind tokens, defined in `tailwind.config.ts` / `globals.css`):
-  `primary` blue, `accent` green, `warning` amber, `danger` red. Track coloring is
-  consistent site-wide: Coding = primary, Robotics = warning, Creativity = accent.
-- **Fonts** — Plus Jakarta Sans (headings), DM Sans (body), JetBrains Mono (numbers),
-  Lora (`font-serif`, the About mission line). Loaded via `next/font` in `layout.tsx`.
+- **Dark theme** — the site uses a dark design system (gocoding.tech style). See §11.
+- **Fonts** — Space Grotesk (`font-heading`, headings), Plus Jakarta Sans (body),
+  JetBrains Mono (`font-mono`, numbers), Lora (`font-serif`, the About mission line).
+  Loaded via `next/font` in `layout.tsx`.
 - **SEO** — every page exports `metadata` with a unique title, description, and canonical.
   `sitemap.ts` + `robots.ts` are generated.
 
@@ -277,3 +275,45 @@ notifications → add an email notification per form.
 - `ContactForm` and `PilotForm` need Netlify email notifications configured (dashboard).
 - No analytics layer (GA4) is wired up.
 - Replace the placeholder `og-image.svg` with a production `.png` when available.
+
+---
+
+## 11. Dark design system
+
+The site uses a dark theme (gocoding.tech style). Tokens are defined in
+`tailwind.config.ts`; supporting CSS variables and utilities live in `globals.css`.
+
+### Color tokens
+
+The **semantic Tailwind tokens map to the dark palette** — use these for everything:
+
+| Token | Value | Use |
+|---|---|---|
+| `bg` / `ink` | `#0D0D1A` | Page background |
+| `surface` / `ink-card` | `#1A1A2E` | Cards, raised panels |
+| `text` | `#E0E0F0` | Body text |
+| `text-muted` | `#9A9ABF` | Secondary text |
+| `primary` / `brand` | `#6C5CE7` | Primary purple |
+| `accent` / `grass` | `#00E676` | Green — money/positive outcomes |
+| `warning` / `flame` | `#FF6B35` | Amber-orange |
+| `border` | `#272740` | Hairline borders |
+| `cyan` | `#00D2FF` | Cyan accent (gradients, focus ring) |
+| `rose` | `#FF6B9D` | Pink accent (warm gradient) |
+
+Track coloring stays consistent site-wide: Coding = `primary`, Robotics = `warning`,
+Creativity = `accent`.
+
+### Utilities (`globals.css`)
+
+- `.text-gradient` / `.text-gradient-green` / `.text-gradient-warm` — gradient-clipped
+  text. Apply to **1–2 keywords or numbers per section**, not whole headings.
+- `.blob` — absolutely-positioned blurred color blob for dark-section depth.
+- `.plus-decor` — CSS-only decorative plus mark.
+- `.hero-grid` — subtle dotted backdrop for hero sections.
+
+### Intentional light sections
+
+Two homepage sections ("How It Works" and "Stats") are deliberately light-on-dark.
+They use **hardcoded light colors** (`text-[#15151f]`, `text-[#5b5b78]`, light
+backgrounds) rather than tokens, so the dark token mapping does not override them.
+If you add a light section, follow the same pattern.

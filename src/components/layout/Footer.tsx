@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Container from '@/components/shared/Container';
 import Logo from './Logo';
-import { ArrowUpRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const cols = [
   {
@@ -45,17 +45,6 @@ export default function Footer() {
               Part of the GoCoding network — gocoding.tech
               <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
-            <div className="mt-5 flex gap-3 text-ink-muted">
-              <a aria-label="LinkedIn" href="#" className="hover:text-white">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a aria-label="Twitter" href="#" className="hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a aria-label="GitHub" href="#" className="hover:text-white">
-                <Github className="h-5 w-5" />
-              </a>
-            </div>
           </div>
           {cols.map((col) => (
             <div key={col.heading}>
