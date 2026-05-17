@@ -57,7 +57,7 @@ export default function HeroSection({
         </div>
 
         {stats.length > 0 && (
-          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-border bg-white/80 p-4 backdrop-blur sm:p-6 md:grid-cols-4">
+          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-white/8 bg-ink-card p-4 sm:p-6 md:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="px-2 py-1">
                 <div className="font-heading text-2xl font-bold text-primary sm:text-3xl">

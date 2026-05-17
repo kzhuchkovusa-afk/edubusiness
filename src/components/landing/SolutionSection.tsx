@@ -34,7 +34,7 @@ export default function SolutionSection({ title, intro, points, closer }: Props)
         ))}
       </div>
 
-      <div className="reveal mt-10 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+      <div className="reveal mt-10 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
         <p className="text-lg leading-relaxed sm:text-xl">{closer}</p>
       </div>
     </Section>

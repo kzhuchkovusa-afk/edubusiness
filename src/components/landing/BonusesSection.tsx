@@ -42,7 +42,7 @@ export default function BonusesSection({ title, items, total }: Props) {
       </div>
 
       <div className="reveal mt-10 text-center">
-        <p className="inline-block rounded-2xl bg-text px-6 py-4 text-lg font-bold text-white">
+        <p className="inline-block rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-4 text-lg font-bold text-white">
           {total}
         </p>
       </div>

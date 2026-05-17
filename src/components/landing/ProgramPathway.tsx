@@ -131,7 +131,7 @@ export default function ProgramPathway({
         ))}
       </div>
 
-      <div className="mt-6 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+      <div className="mt-6 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
         <p className="text-[15px] leading-relaxed sm:text-base">
           Each program is a full academic year: 36+ lessons, homework, tests,
           and parent reports. $40/month per program. Start with one — add more
