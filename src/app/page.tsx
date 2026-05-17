@@ -23,14 +23,43 @@ export const metadata: Metadata = {
   },
 };
 
-const bento = [
-  { icon: '💰', label: 'New revenue', value: '$3–5K/mo', span: true, tone: 'grad' },
-  { icon: '📊', label: 'Monthly retention', value: '95%', tone: 'plain' },
-  { icon: '🚀', label: 'To launch', value: '2 weeks', tone: 'green' },
-  { icon: '📚', label: 'Programs', value: '15+', tone: 'plain' },
-  { icon: '⏱️', label: 'Teacher prep', value: '10 min', tone: 'orange' },
-  { icon: '💵', label: 'Per program', value: '$40/mo', span: true, tone: 'grad' },
-];
+function Metric({
+  icon,
+  label,
+  value,
+  tone = 'plain',
+  className = '',
+}: {
+  icon: string;
+  label: string;
+  value: string;
+  tone?: 'plain' | 'grad' | 'green' | 'orange';
+  className?: string;
+}) {
+  const toneCls = {
+    plain: 'border-white/6 bg-ink-card',
+    grad: 'border-transparent bg-gradient-to-br from-brand to-cyan',
+    green: 'border-grass/20 bg-grass/[0.12]',
+    orange: 'border-flame/20 bg-flame/[0.12]',
+  }[tone];
+  return (
+    <div
+      className={`flex flex-col justify-end rounded-2xl border p-4 transition-transform hover:-translate-y-1 sm:p-5 ${toneCls} ${className}`}
+    >
+      <div className="text-2xl">{icon}</div>
+      <div
+        className={`mt-2 text-[11px] font-medium sm:text-xs ${
+          tone === 'grad' ? 'text-white/70' : 'text-ink-muted'
+        }`}
+      >
+        {label}
+      </div>
+      <div className="font-heading text-xl font-bold text-white sm:text-2xl">
+        {value}
+      </div>
+    </div>
+  );
+}
 
 const benefits = [
   {
@@ -174,35 +203,40 @@ export default function HomePage() {
             </div>
 
             {/* Bento metric grid */}
-            <div className="reveal grid grid-cols-2 gap-3">
-              {bento.map((b) => (
-                <div
-                  key={b.label}
-                  className={[
-                    'flex flex-col justify-end rounded-2xl border p-5 transition-transform hover:-translate-y-1',
-                    b.span ? 'col-span-2' : '',
-                    b.tone === 'grad'
-                      ? 'border-transparent bg-gradient-to-br from-brand to-cyan'
-                      : b.tone === 'green'
-                        ? 'border-grass/20 bg-grass/[0.12]'
-                        : b.tone === 'orange'
-                          ? 'border-flame/20 bg-flame/[0.12]'
-                          : 'border-white/6 bg-ink-card',
-                  ].join(' ')}
-                >
-                  <div className="text-2xl">{b.icon}</div>
-                  <div
-                    className={`mt-2 text-xs font-medium ${
-                      b.tone === 'grad' ? 'text-white/70' : 'text-ink-muted'
-                    }`}
-                  >
-                    {b.label}
-                  </div>
-                  <div className="font-heading text-2xl font-bold text-white">
-                    {b.value}
-                  </div>
+            <div className="reveal grid grid-cols-3 gap-2.5 sm:gap-3">
+              <Metric
+                icon="💰"
+                label="New revenue"
+                value="$3–5K/mo"
+                tone="grad"
+                className="col-span-2"
+              />
+              <Metric icon="📊" label="Monthly retention" value="95%" />
+
+              {/* Featured price card — spans two rows */}
+              <div className="row-span-2 flex flex-col items-center justify-center rounded-2xl border border-white/6 bg-ink-card p-4 text-center transition-transform hover:-translate-y-1 sm:p-5">
+                <div className="font-heading text-[40px] font-extrabold leading-none text-white sm:text-6xl">
+                  $40
                 </div>
-              ))}
+                <div className="mt-1 text-sm font-semibold text-ink-muted">
+                  /month
+                </div>
+                <div className="mt-3 text-[11px] leading-relaxed text-ink-muted sm:text-xs">
+                  Full academic year
+                  <br />
+                  per program
+                </div>
+              </div>
+
+              <Metric icon="🚀" label="To launch" value="2 weeks" tone="green" />
+              <Metric icon="📚" label="Programs" value="15+" />
+              <Metric
+                icon="⏱️"
+                label="Teacher prep"
+                value="10 minutes"
+                tone="orange"
+                className="col-span-2"
+              />
             </div>
           </div>
         </Container>
