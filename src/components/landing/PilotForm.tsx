@@ -76,7 +76,7 @@ export default function PilotForm() {
           {['Yes', 'No'].map((opt) => (
             <label
               key={opt}
-              className="flex flex-1 cursor-pointer items-center gap-2 rounded-xl border border-border bg-white px-4 py-2.5 text-[15px] has-[:checked]:border-primary has-[:checked]:bg-primary/5"
+              className="flex flex-1 cursor-pointer items-center gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-[15px] has-[:checked]:border-primary has-[:checked]:bg-primary/5"
             >
               <input
                 type="radio"
@@ -128,7 +128,7 @@ function Text({
   textarea?: boolean;
 }) {
   const base =
-    'mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15';
+    'mt-1 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-[15px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15';
   return (
     <label className="block">
       <span className="text-sm font-semibold text-text">

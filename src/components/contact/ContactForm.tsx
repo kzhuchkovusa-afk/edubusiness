@@ -127,7 +127,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"
+        className="mt-1 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-[15px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"
       />
     </label>
   );

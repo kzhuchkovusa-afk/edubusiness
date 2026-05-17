@@ -430,7 +430,7 @@ export default function CodingCentersPage() {
               key={col.tag}
               className={cn(
                 'reveal flex flex-col rounded-2xl border p-6 shadow-card',
-                col.tone === 'neutral' && 'border-border bg-[#F3F5F8]',
+                col.tone === 'neutral' && 'border-border bg-white/[0.04]',
                 col.tone === 'danger' && 'border-danger/30 bg-danger/[0.05]',
                 col.tone === 'accent' && 'border-accent/40 bg-accent/[0.06]',
               )}
@@ -439,7 +439,7 @@ export default function CodingCentersPage() {
               <span
                 className={cn(
                   'inline-block w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider',
-                  col.tone === 'neutral' && 'bg-black/5 text-text-muted',
+                  col.tone === 'neutral' && 'bg-white/8 text-text-muted',
                   col.tone === 'danger' && 'bg-danger/15 text-danger',
                   col.tone === 'accent' && 'bg-accent/15 text-accent',
                 )}
@@ -522,11 +522,11 @@ export default function CodingCentersPage() {
             title="Why not just keep doing what you're doing?"
           />
         </div>
-        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-white shadow-card">
+        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-surface shadow-card">
           <table className="w-full min-w-[820px] border-collapse text-left text-sm">
             <thead>
               <tr>
-                <th className="sticky left-0 z-10 bg-white px-4 py-3" />
+                <th className="sticky left-0 z-10 bg-surface px-4 py-3" />
                 {compareHeaders.map((h, i) => (
                   <th
                     key={h}
@@ -544,12 +544,12 @@ export default function CodingCentersPage() {
             </thead>
             <tbody>
               {compareRows.map((row, ri) => (
-                <tr key={row.label} className={ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'}>
+                <tr key={row.label} className={ri % 2 ? 'bg-ink' : 'bg-surface'}>
                   <th
                     scope="row"
                     className={cn(
                       'sticky left-0 z-10 px-4 py-3 text-left font-semibold',
-                      ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white',
+                      ri % 2 ? 'bg-ink' : 'bg-surface',
                     )}
                   >
                     {row.label}
@@ -599,7 +599,7 @@ export default function CodingCentersPage() {
                   <div key={`${step.name}-${i}`} className="flex items-center gap-3">
                     <div
                       className={cn(
-                        'flex w-[160px] shrink-0 flex-col rounded-2xl border bg-white p-4',
+                        'flex w-[160px] shrink-0 flex-col rounded-2xl border bg-surface p-4',
                         trackCardTone[track.tone],
                       )}
                     >
@@ -675,7 +675,7 @@ export default function CodingCentersPage() {
           {guaranteeCards.map((c, i) => (
             <div
               key={c.title}
-              className="reveal flex flex-col rounded-2xl border border-accent/30 bg-white p-6 shadow-card"
+              className="reveal flex flex-col rounded-2xl border border-accent/30 bg-surface p-6 shadow-card"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent text-white">
@@ -709,7 +709,7 @@ export default function CodingCentersPage() {
               {costOfNothing.map((l) => (
                 <li
                   key={l.label}
-                  className="flex flex-col items-start justify-between gap-1 rounded-xl bg-white p-4 sm:flex-row sm:items-center"
+                  className="flex flex-col items-start justify-between gap-1 rounded-xl bg-surface p-4 sm:flex-row sm:items-center"
                 >
                   <span className="text-[15px] text-text-muted">{l.label}</span>
                   <span className="font-mono text-lg font-bold text-danger">
@@ -725,7 +725,7 @@ export default function CodingCentersPage() {
               {costOfGoCoding.map((l) => (
                 <li
                   key={l.label}
-                  className="flex flex-col items-start justify-between gap-1 rounded-xl bg-white p-4 sm:flex-row sm:items-center"
+                  className="flex flex-col items-start justify-between gap-1 rounded-xl bg-surface p-4 sm:flex-row sm:items-center"
                 >
                   <span className="text-[15px] text-text-muted">{l.label}</span>
                   <span className="font-mono text-lg font-bold text-accent">
@@ -758,7 +758,7 @@ export default function CodingCentersPage() {
                 key={path.title}
                 className={cn(
                   'reveal flex flex-col rounded-2xl border p-6',
-                  path.tone === 'neutral' && 'border-border bg-[#F3F5F8]',
+                  path.tone === 'neutral' && 'border-border bg-white/[0.04]',
                   path.tone === 'warning' && 'border-warning/40 bg-warning/[0.08]',
                   recommended && 'border-2 border-accent bg-accent/[0.07] shadow-card',
                 )}

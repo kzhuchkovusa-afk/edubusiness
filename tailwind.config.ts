@@ -9,21 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Light theme tokens (still used by inner pages — migrated in later stages)
-        bg: '#FAFAFA',
-        surface: '#FFFFFF',
+        // Semantic tokens — now mapped to the dark theme
+        bg: '#0D0D1A',
+        surface: '#1A1A2E',
         text: {
-          DEFAULT: '#1A1A2E',
-          muted: '#6B7280',
+          DEFAULT: '#E0E0F0',
+          muted: '#9A9ABF',
         },
         primary: {
-          DEFAULT: '#2563EB',
-          dark: '#1D4ED8',
+          DEFAULT: '#6C5CE7',
+          dark: '#5B4BD4',
         },
-        accent: '#10B981',
-        warning: '#F59E0B',
+        accent: '#00E676',
+        warning: '#FF6B35',
         danger: '#EF4444',
-        border: '#E5E7EB',
+        border: '#272740',
 
         // Dark theme tokens (gocoding.tech-style redesign)
         ink: {

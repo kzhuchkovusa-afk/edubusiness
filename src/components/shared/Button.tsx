@@ -32,8 +32,8 @@ const variants: Record<Variant, string> = {
   primary:
     'bg-primary text-white hover:bg-primary-dark shadow-card hover:shadow-card-hover',
   outline:
-    'bg-white text-text border border-border hover:border-primary hover:text-primary',
-  ghost: 'bg-transparent text-text hover:bg-black/5',
+    'bg-surface text-text border border-border hover:border-primary hover:text-primary',
+  ghost: 'bg-transparent text-text hover:bg-white/5',
   accent: 'bg-accent text-white hover:brightness-95 shadow-card hover:shadow-card-hover',
   // Dark redesign
   gradient:

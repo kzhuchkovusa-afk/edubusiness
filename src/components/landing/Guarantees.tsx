@@ -32,7 +32,7 @@ export default function Guarantees() {
       {items.map((it) => (
         <div
           key={it.title}
-          className="reveal rounded-2xl border border-accent/30 bg-white p-6 shadow-card"
+          className="reveal rounded-2xl border border-accent/30 bg-surface p-6 shadow-card"
         >
           <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent text-white">
             <it.icon className="h-5 w-5" />

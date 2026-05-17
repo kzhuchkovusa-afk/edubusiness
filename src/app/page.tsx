@@ -255,14 +255,14 @@ export default function HomePage() {
       {/* ===== 4. How It Works (light) ===== */}
       <section
         id="how-it-works"
-        className="scroll-mt-20 bg-light-section py-16 text-text sm:py-20 md:py-24"
+        className="scroll-mt-20 bg-light-section py-16 text-[#15151f] sm:py-20 md:py-24"
       >
         <Container>
           <div className="reveal mx-auto max-w-2xl text-center">
             <div className="text-xs font-bold uppercase tracking-[2px] text-brand">
               How It Works
             </div>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-text sm:text-[40px]">
+            <h2 className="mt-3 font-heading text-3xl font-bold text-[#15151f] sm:text-[40px]">
               Three steps to your first STEM group
             </h2>
           </div>
@@ -276,10 +276,10 @@ export default function HomePage() {
                 >
                   {i + 1}
                 </div>
-                <h3 className="mt-5 font-heading text-xl font-bold text-text">
+                <h3 className="mt-5 font-heading text-xl font-bold text-[#15151f]">
                   {s.title}
                 </h3>
-                <p className="mx-auto mt-3 max-w-xs text-[15px] leading-relaxed text-text-muted">
+                <p className="mx-auto mt-3 max-w-xs text-[15px] leading-relaxed text-[#5b5b78]">
                   {s.text}
                 </p>
               </div>
@@ -341,13 +341,13 @@ export default function HomePage() {
       </section>
 
       {/* ===== 7. Stats (light) ===== */}
-      <section id="proof" className="scroll-mt-20 bg-light-section py-16 text-text sm:py-20 md:py-24">
+      <section id="proof" className="scroll-mt-20 bg-light-section py-16 text-[#15151f] sm:py-20 md:py-24">
         <Container>
           <div className="reveal mx-auto max-w-2xl text-center">
             <div className="text-xs font-bold uppercase tracking-[2px] text-brand">
               Proof
             </div>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-text sm:text-[40px]">
+            <h2 className="mt-3 font-heading text-3xl font-bold text-[#15151f] sm:text-[40px]">
               Proven across 500+ students right now
             </h2>
           </div>
@@ -360,11 +360,11 @@ export default function HomePage() {
                 <div className={`font-heading text-[44px] font-extrabold leading-none ${s.cls}`}>
                   {s.value}
                 </div>
-                <div className="mt-3 text-sm text-text-muted">{s.label}</div>
+                <div className="mt-3 text-sm text-[#5b5b78]">{s.label}</div>
               </div>
             ))}
           </div>
-          <p className="reveal mx-auto mt-8 max-w-2xl text-center text-text-muted">
+          <p className="reveal mx-auto mt-8 max-w-2xl text-center text-[#5b5b78]">
             Built on the experience of CODDY International: 150+ locations in
             20+ countries. 8,600+ students trained.
           </p>

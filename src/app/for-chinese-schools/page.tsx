@@ -216,11 +216,11 @@ export default function ChineseSchoolsPage() {
         <div className="reveal max-w-3xl">
           <SectionHeading eyebrow="Side by side" title="How GoCoding compares" />
         </div>
-        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-white shadow-card">
+        <div className="reveal mt-10 overflow-x-auto rounded-2xl border border-border bg-surface shadow-card">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
             <thead>
               <tr>
-                <th className="sticky left-0 z-10 bg-white px-4 py-3" />
+                <th className="sticky left-0 z-10 bg-surface px-4 py-3" />
                 {compareHeaders.map((h, i) => (
                   <th
                     key={h}
@@ -235,11 +235,11 @@ export default function ChineseSchoolsPage() {
             </thead>
             <tbody>
               {compareRows.map((row, ri) => (
-                <tr key={row.label} className={ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'}>
+                <tr key={row.label} className={ri % 2 ? 'bg-ink' : 'bg-surface'}>
                   <th
                     scope="row"
                     className={`sticky left-0 z-10 px-4 py-3 text-left font-semibold ${
-                      ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'
+                      ri % 2 ? 'bg-ink' : 'bg-surface'
                     }`}
                   >
                     {row.label}
@@ -273,7 +273,7 @@ export default function ChineseSchoolsPage() {
           {proof.map((p) => (
             <div
               key={p.label}
-              className="rounded-2xl border border-border bg-white p-6 shadow-card"
+              className="rounded-2xl border border-border bg-surface p-6 shadow-card"
             >
               <div className="font-heading text-4xl font-extrabold text-primary">
                 {p.stat}

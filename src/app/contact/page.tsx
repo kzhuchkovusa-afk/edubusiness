@@ -56,7 +56,7 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 rounded-xl bg-white p-4 text-sm text-text-muted">
+            <p className="mt-6 rounded-xl bg-surface p-4 text-sm text-text-muted">
               All we need: your contact details and a short call. No payment, no
               contract, no obligation.
             </p>

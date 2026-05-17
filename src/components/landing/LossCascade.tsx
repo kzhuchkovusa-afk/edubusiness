@@ -25,7 +25,7 @@ const steps = [
 
 export default function LossCascade() {
   return (
-    <div className="rounded-3xl border border-border bg-white p-6 shadow-card sm:p-8">
+    <div className="rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8">
       <div className="space-y-2">
         {steps.map((s, i) => (
           <div key={i}>

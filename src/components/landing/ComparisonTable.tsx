@@ -17,10 +17,10 @@ export default function ComparisonTable({ title, headers, rows }: Props) {
       </div>
 
       {/* Desktop table */}
-      <div className="reveal mt-10 hidden overflow-hidden rounded-2xl border border-border bg-white shadow-card md:block">
+      <div className="reveal mt-10 hidden overflow-hidden rounded-2xl border border-border bg-surface shadow-card md:block">
         <table className="w-full table-fixed">
           <thead>
-            <tr className="bg-[#F3F5F8] text-left text-sm uppercase tracking-wider text-text-muted">
+            <tr className="bg-white/[0.04] text-left text-sm uppercase tracking-wider text-text-muted">
               <th className="w-1/4 px-6 py-4"> </th>
               {headers.map((h, i) => (
                 <th
@@ -37,7 +37,7 @@ export default function ComparisonTable({ title, headers, rows }: Props) {
           </thead>
           <tbody>
             {rows.map((row, ri) => (
-              <tr key={row.label} className={ri % 2 ? 'bg-[#FAFAFA]' : 'bg-white'}>
+              <tr key={row.label} className={ri % 2 ? 'bg-ink' : 'bg-surface'}>
                 <td className="px-6 py-4 font-semibold">{row.label}</td>
                 {row.values.map((v, i) => {
                   const isWinner = i === row.values.length - 1;
@@ -72,14 +72,14 @@ export default function ComparisonTable({ title, headers, rows }: Props) {
           <div
             key={h}
             className={cn(
-              'rounded-2xl border bg-white p-5 shadow-card',
+              'rounded-2xl border bg-surface p-5 shadow-card',
               i === headers.length - 1 ? 'border-primary' : 'border-border',
             )}
           >
             <div
               className={cn(
                 'mb-3 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider',
-                i === headers.length - 1 ? 'bg-primary text-white' : 'bg-black/5 text-text-muted',
+                i === headers.length - 1 ? 'bg-primary text-white' : 'bg-white/8 text-text-muted',
               )}
             >
               {h}

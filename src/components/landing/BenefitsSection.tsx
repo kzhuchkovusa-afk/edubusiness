@@ -21,7 +21,7 @@ export default function BenefitsSection({ title, columns }: Props) {
         {columns.map((c, i) => (
           <div
             key={c.title}
-            className="reveal rounded-2xl border border-border bg-white p-7 shadow-card"
+            className="reveal rounded-2xl border border-border bg-surface p-7 shadow-card"
             style={{ transitionDelay: `${i * 80}ms` }}
           >
             <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-white">

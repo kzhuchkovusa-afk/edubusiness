@@ -78,7 +78,7 @@ export default function WhatsIncluded() {
           </div>
         ))}
       </div>
-      <div className="reveal mt-6 rounded-2xl border border-border bg-white p-6 shadow-card">
+      <div className="reveal mt-6 rounded-2xl border border-border bg-surface p-6 shadow-card">
         <p className="text-[15px] text-text/90">
           <span className="font-semibold">Compare:</span> Code.org is a free
           self-paced tool — no lesson plans, no parent reports, no marketing. A

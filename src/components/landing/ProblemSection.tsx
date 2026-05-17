@@ -37,7 +37,7 @@ export default function ProblemSection({ title, story, threat }: Props) {
               {threat.competitors.map((c) => (
                 <li
                   key={c.name}
-                  className="flex items-center justify-between gap-3 rounded-xl bg-white p-3"
+                  className="flex items-center justify-between gap-3 rounded-xl bg-surface p-3"
                 >
                   <span className="flex items-center gap-2 font-semibold">
                     <MapPin className="h-4 w-4 text-danger" />

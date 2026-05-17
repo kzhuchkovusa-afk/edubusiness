@@ -6,7 +6,7 @@ const DEMO_HREF = '/contact?demo=true';
 export default function ThreePaths() {
   return (
     <div className="grid gap-5 md:grid-cols-3">
-      <div className="rounded-2xl border border-border bg-[#F3F5F8] p-6">
+      <div className="rounded-2xl border border-border bg-white/[0.04] p-6">
         <div className="text-xs font-bold uppercase tracking-wider text-text-muted">
           Path 1
         </div>

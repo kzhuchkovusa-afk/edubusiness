@@ -36,7 +36,7 @@ export default function PricingSection({ title, left, right, callout }: Props) {
             {left.lines.map((l) => (
               <li
                 key={l.label}
-                className="flex flex-col items-start justify-between gap-1 rounded-xl bg-white p-4 sm:flex-row sm:items-center"
+                className="flex flex-col items-start justify-between gap-1 rounded-xl bg-surface p-4 sm:flex-row sm:items-center"
               >
                 <span className="text-[15px] text-text-muted">{l.label}</span>
                 <span className="font-mono text-lg font-bold text-danger">{l.value}</span>
@@ -68,7 +68,7 @@ export default function PricingSection({ title, left, right, callout }: Props) {
                     {b.value}
                   </span>
                 </div>
-                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-white">
+                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-surface">
                   <div
                     className={cn('h-full rounded-full', toneClasses[toneOf(b.tone)])}
                     style={{ width: `${Math.max(4, b.weight)}%` }}
