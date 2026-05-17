@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  /* Light theme (inner pages) */
   --color-bg: #fafafa;
   --color-surface: #ffffff;
   --color-text: #1a1a2e;
@@ -13,6 +14,16 @@
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
   --color-border: #e5e7eb;
+
+  /* Dark theme (redesign) */
+  --ink: #0d0d1a;
+  --ink-card: #1a1a2e;
+  --brand: #6c5ce7;
+  --cyan: #00d2ff;
+  --grass: #00e676;
+  --gradient-1: linear-gradient(135deg, #6c5ce7, #00d2ff);
+  --gradient-2: linear-gradient(135deg, #ff6b35, #ff6b9d);
+  --gradient-3: linear-gradient(135deg, #00e676, #00d2ff);
 }
 
 html {
@@ -22,9 +33,9 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--ink);
   color: var(--color-text);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -35,33 +46,96 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-family: var(--font-space), system-ui, sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.15;
-  color: var(--color-text);
 }
 
-/* Reveal-on-scroll utility */
+/* Reveal-on-scroll */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   will-change: opacity, transform;
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Number counter monospace alignment */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
 
-/* Subtle gradient backdrop for hero */
+/* Light dotted backdrop (inner-page heroes) */
 .hero-grid {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(37, 99, 235, 0.07) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(37, 99, 235, 0.07) 1px,
+    transparent 0
+  );
   background-size: 28px 28px;
+}
+
+/* ===== Dark redesign utilities ===== */
+
+/* Gradient text — apply to 1–2 keywords/numbers per section */
+.text-gradient {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.text-gradient-green {
+  background: var(--gradient-3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.text-gradient-warm {
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Decorative blurred blobs (dark sections only) */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* CSS-only plus decoration */
+.plus-decor {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0.13;
+  pointer-events: none;
+}
+.plus-decor::before,
+.plus-decor::after {
+  content: '';
+  position: absolute;
+  background: var(--brand);
+  border-radius: 2px;
+}
+.plus-decor::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.plus-decor::after {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -21,20 +21,20 @@ export default function MobileMenu() {
   }, [open]);
 
   const overlay = (
-    <div className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-white md:hidden">
-      <div className="flex items-center justify-between border-b border-border px-5 py-4">
+    <div className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-ink md:hidden">
+      <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="font-heading text-xl font-bold"
+          className="font-heading text-xl font-bold text-white"
         >
-          GoCoding
+          Go<span className="text-cyan">Coding</span>
         </Link>
         <button
           type="button"
           onClick={() => setOpen(false)}
           aria-label="Close menu"
-          className="rounded-lg p-2 text-text hover:bg-black/5"
+          className="rounded-lg p-2 text-ink-text hover:bg-white/5"
         >
           <X className="h-6 w-6" />
         </button>
@@ -45,12 +45,12 @@ export default function MobileMenu() {
             key={link.href}
             href={link.href}
             onClick={() => setOpen(false)}
-            className="rounded-lg px-3 py-3 text-lg font-medium hover:bg-black/5"
+            className="rounded-lg px-3 py-3 text-lg font-medium text-ink-text hover:bg-white/5"
           >
             {link.label}
           </Link>
         ))}
-        <div className="mt-3 px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+        <div className="mt-3 px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-ink-muted">
           For Your Business
         </div>
         {SEGMENT_LINKS.map((link) => (
@@ -58,13 +58,13 @@ export default function MobileMenu() {
             key={link.href}
             href={link.href}
             onClick={() => setOpen(false)}
-            className="rounded-lg px-3 py-3 text-lg font-medium hover:bg-black/5"
+            className="rounded-lg px-3 py-3 text-lg font-medium text-ink-text hover:bg-white/5"
           >
             {link.label}
           </Link>
         ))}
         <div className="mt-4">
-          <Button href="/contact?demo=true" variant="primary" size="lg">
+          <Button href="/contact?demo=true" variant="gradient" size="lg">
             Get a Free Demo Lesson
           </Button>
         </div>
@@ -78,7 +78,7 @@ export default function MobileMenu() {
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Open menu"
-        className="rounded-lg p-2 text-text hover:bg-black/5"
+        className="rounded-lg p-2 text-ink-text hover:bg-white/5"
       >
         <Menu className="h-6 w-6" />
       </button>

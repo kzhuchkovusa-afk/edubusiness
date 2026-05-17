@@ -15,11 +15,11 @@ export const SEGMENT_LINKS = [
 ];
 
 const linkClass =
-  'text-[15px] font-medium text-text/80 transition-colors hover:text-text';
+  'text-sm font-medium text-ink-muted transition-colors hover:text-white';
 
 export default function Navigation() {
   return (
-    <nav aria-label="Primary" className="flex items-center gap-7">
+    <nav aria-label="Primary" className="flex items-center gap-8">
       {NAV_LINKS.map((link) => (
         <Link key={link.href} href={link.href} className={linkClass}>
           {link.label}
@@ -31,18 +31,18 @@ export default function Navigation() {
         <button
           type="button"
           aria-haspopup="true"
-          className="inline-flex items-center gap-1 text-[15px] font-medium text-text/80 transition-colors hover:text-text group-hover:text-text group-focus-within:text-text"
+          className="inline-flex items-center gap-1 text-sm font-medium text-ink-muted transition-colors hover:text-white group-hover:text-white group-focus-within:text-white"
         >
           For Your Business
           <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
         </button>
         <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-          <div className="rounded-xl border border-border bg-white p-2 shadow-card">
+          <div className="rounded-2xl border border-white/10 bg-ink-card p-2 shadow-card-dark">
             {SEGMENT_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-lg px-3 py-2 text-[15px] font-medium text-text/80 transition-colors hover:bg-black/5 hover:text-text"
+                className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:bg-white/5 hover:text-white"
               >
                 {link.label}
               </Link>
