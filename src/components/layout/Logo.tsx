@@ -10,16 +10,10 @@ export default function Logo({ withTagline = false }: { withTagline?: boolean })
       <span className="flex flex-col leading-tight">
         <span className="font-heading text-lg font-bold tracking-tight text-white">
           Go<span className="text-cyan">Coding</span>
-          {withTagline && (
-            <span className="hidden font-sans text-sm font-medium text-ink-muted lg:inline">
-              {' '}
-              — STEM for your business
-            </span>
-          )}
         </span>
         {withTagline && (
-          <span className="text-[11px] font-semibold uppercase tracking-wide text-brand-light">
-            Affordable · Simple · Results
+          <span className="text-[11px] font-semibold tracking-wide text-cyan">
+            for Business
           </span>
         )}
       </span>

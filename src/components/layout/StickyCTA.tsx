@@ -40,8 +40,7 @@ export default function StickyCTA() {
     >
       <div className="pointer-events-auto flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-ink-card p-3 shadow-card-dark sm:flex-nowrap">
         <div className="pl-1 text-sm text-ink-text">
-          <span className="font-bold text-white">$40/mo</span> — STEM for your
-          center
+          Licensed STEM — <span className="font-bold text-white">$40/mo</span>
         </div>
         <Link
           href="/contact?demo=true"
