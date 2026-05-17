@@ -118,7 +118,7 @@ public/
 | Component | Purpose |
 |---|---|
 | `Header` | Sticky top bar — logo, desktop nav, demo CTA, mobile menu trigger |
-| `Navigation` | Desktop nav links. **Exports `NAV_LINKS`** — the single source of nav links |
+| `Navigation` | Desktop nav — flat links + a "For Your Business" dropdown for segment pages. **Exports `NAV_LINKS`** (top-level) and **`SEGMENT_LINKS`** (the `/for-*` pages) |
 | `MobileMenu` (c) | Full-screen mobile menu. Rendered via a **portal to `document.body`** so the header's `backdrop-blur` does not trap the `fixed` overlay |
 | `Footer` | Footer — link columns, `gocoding.tech` link, socials |
 | `Logo` | Logo lockup. `withTagline` prop adds the descriptor + values line |

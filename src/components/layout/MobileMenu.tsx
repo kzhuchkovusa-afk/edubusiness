@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { NAV_LINKS } from './Navigation';
+import { NAV_LINKS, SEGMENT_LINKS } from './Navigation';
 import Button from '@/components/shared/Button';
 
 export default function MobileMenu() {
@@ -41,6 +41,19 @@ export default function MobileMenu() {
       </div>
       <nav aria-label="Mobile" className="flex flex-col gap-1 p-5">
         {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className="rounded-lg px-3 py-3 text-lg font-medium hover:bg-black/5"
+          >
+            {link.label}
+          </Link>
+        ))}
+        <div className="mt-3 px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+          For Your Business
+        </div>
+        {SEGMENT_LINKS.map((link) => (
           <Link
             key={link.href}
             href={link.href}
