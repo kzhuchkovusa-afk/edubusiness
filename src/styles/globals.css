@@ -3,19 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme (inner pages) */
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-text: #1a1a2e;
-  --color-text-muted: #6b7280;
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #10b981;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-border: #e5e7eb;
-
-  /* Dark theme (redesign) */
   --ink: #0d0d1a;
   --ink-card: #1a1a2e;
   --brand: #6c5ce7;
@@ -34,7 +21,7 @@ html {
 
 body {
   background-color: var(--ink);
-  color: var(--color-text);
+  color: #e0e0f0;
   font-family: var(--font-jakarta), system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -67,11 +54,11 @@ h6 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Light dotted backdrop (inner-page heroes) */
+/* Dotted backdrop (hero sections) */
 .hero-grid {
   background-image: radial-gradient(
     circle at 1px 1px,
-    rgba(37, 99, 235, 0.07) 1px,
+    rgba(108, 92, 231, 0.18) 1px,
     transparent 0
   );
   background-size: 28px 28px;

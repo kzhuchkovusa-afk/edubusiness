@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import {
-  DM_Sans,
   Lora,
   Plus_Jakarta_Sans,
   JetBrains_Mono,
@@ -17,13 +16,6 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-jakarta',
   weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-});
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -86,7 +78,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable} ${lora.variable} ${spaceGrotesk.variable}`}
+      className={`${jakarta.variable} ${jetbrains.variable} ${lora.variable} ${spaceGrotesk.variable}`}
     >
       <head>
         <noscript>
