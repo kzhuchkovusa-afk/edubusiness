@@ -7,7 +7,7 @@ import Logo from './Logo';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur supports-[backdrop-filter]:bg-ink/70">
       <Container className="flex h-16 items-center justify-between gap-6">
         <Link href="/" aria-label="GoCoding home" className="flex items-center">
           <Logo withTagline />
@@ -18,8 +18,8 @@ export default function Header() {
         </div>
 
         <div className="hidden md:block">
-          <Button href="/contact?demo=true" variant="primary" size="sm">
-            Get a Free Demo Lesson
+          <Button href="/contact?demo=true" variant="gradient" size="sm">
+            Get a Free Demo →
           </Button>
         </div>
 

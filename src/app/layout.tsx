@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Lora, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import {
+  DM_Sans,
+  Lora,
+  Plus_Jakarta_Sans,
+  JetBrains_Mono,
+  Space_Grotesk,
+} from 'next/font/google';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -32,6 +38,13 @@ const lora = Lora({
   subsets: ['latin'],
   variable: '--font-serif',
   weight: ['500', '600'],
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space',
+  weight: ['500', '600', '700'],
   display: 'swap',
 });
 
@@ -73,7 +86,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable} ${lora.variable}`}
+      className={`${jakarta.variable} ${dmSans.variable} ${jetbrains.variable} ${lora.variable} ${spaceGrotesk.variable}`}
     >
       <head>
         <noscript>
@@ -81,7 +94,7 @@ export default function RootLayout({
           <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
         </noscript>
       </head>
-      <body className="bg-bg text-text">
+      <body className="bg-ink text-ink-text">
         <Header />
         <main id="main">{children}</main>
         <Footer />
