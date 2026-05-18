@@ -277,7 +277,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-8 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-lg font-semibold leading-relaxed sm:text-xl">
             The only way to lose is to not try. And trying costs you 10 minutes.
           </p>

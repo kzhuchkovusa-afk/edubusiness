@@ -457,7 +457,7 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
-        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-8 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-lg leading-relaxed">{scenarioNote}</p>
         </div>
       </Section>
@@ -575,7 +575,7 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
-        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-8 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-lg leading-relaxed">
             The only cost of trying is 10 minutes of your teacher&rsquo;s time.
             The cost of NOT trying is every family that asks about coding and
@@ -634,7 +634,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="reveal mt-8 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-8 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-lg leading-relaxed">
             $40/month is not an expense. It is insurance against losing every
             family that walks through your door asking about STEM.

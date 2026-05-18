@@ -186,7 +186,7 @@ export default function SpanishSchoolsPage() {
             </div>
           </div>
 
-          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-border bg-white/80 p-4 backdrop-blur sm:grid-cols-3 md:grid-cols-5 sm:p-6">
+          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-white/8 bg-ink-card p-4 sm:grid-cols-3 md:grid-cols-5 sm:p-6">
             {heroStats.map((s) => (
               <div key={s.label} className="px-2 py-1">
                 <div className="font-heading text-2xl font-bold text-primary sm:text-3xl">
@@ -280,7 +280,7 @@ export default function SpanishSchoolsPage() {
             </div>
           </div>
         </div>
-        <div className="reveal mt-6 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-6 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-lg font-bold sm:text-xl">
             The difference: $16,000 per family.
           </p>

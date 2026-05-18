@@ -403,7 +403,7 @@ export default function CodingCentersPage() {
             </div>
           </div>
 
-          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-border bg-white/80 p-4 backdrop-blur sm:p-6 md:grid-cols-4">
+          <div className="reveal mt-14 grid grid-cols-2 gap-4 rounded-2xl border border-white/8 bg-ink-card p-4 sm:p-6 md:grid-cols-4">
             {heroStats.map((s) => (
               <div key={s.label} className="px-2 py-1">
                 <div className="font-heading text-2xl font-bold text-primary sm:text-3xl">
@@ -622,7 +622,7 @@ export default function CodingCentersPage() {
             </div>
           ))}
         </div>
-        <div className="reveal mt-6 rounded-2xl bg-text px-6 py-5 text-white sm:px-8">
+        <div className="reveal mt-6 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-5 text-white sm:px-8">
           <p className="text-[15px] leading-relaxed sm:text-base">
             Each program: 36+ lessons, homework, tests, parent reports.
             $40/month per program. Start with Scratch — add more as you grow.
@@ -736,7 +736,7 @@ export default function CodingCentersPage() {
             </ul>
           </div>
         </div>
-        <div className="reveal mt-10 rounded-2xl bg-text px-6 py-6 text-white sm:px-8">
+        <div className="reveal mt-10 rounded-2xl bg-gradient-to-br from-brand to-cyan px-6 py-6 text-white sm:px-8">
           <p className="text-lg leading-relaxed sm:text-xl">
             $40/month is less than one hour of an instructor&rsquo;s pay. But
             it&rsquo;s the difference between &ldquo;program collapses&rdquo; and

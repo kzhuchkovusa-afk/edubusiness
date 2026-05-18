@@ -84,7 +84,7 @@ function Cell({ track, row }: { track: Track; row: number }) {
       {progs.length > 0 ? (
         progs.map((p) => <ProgramTile key={p.slug} program={p} tone={track.tone} />)
       ) : isSoon(track.id, row) ? (
-        <div className="flex min-h-[60px] items-center justify-center rounded-xl border border-dashed border-border bg-white/60 px-2 text-center text-xs font-medium text-text-muted">
+        <div className="flex min-h-[60px] items-center justify-center rounded-xl border border-dashed border-white/15 bg-white/[0.03] px-2 text-center text-xs font-medium text-text-muted">
           New course — coming soon
         </div>
       ) : (
