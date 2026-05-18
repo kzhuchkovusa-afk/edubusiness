@@ -190,14 +190,14 @@ export default function ProgramsPage() {
             </div>
 
             {/* Right: track quick-cards */}
-            <div className="reveal grid gap-4">
+            <div className="stagger grid gap-4">
               {tracks.map((track) => {
                 const TrackIcon = trackIcons[track.id];
                 return (
                   <a
                     key={track.id}
                     href={`#${track.id}-track`}
-                    className={`group flex items-center gap-4 rounded-2xl border ${trackBorder[track.tone]} bg-ink-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-dark`}
+                    className={`reveal group flex items-center gap-4 rounded-2xl border ${trackBorder[track.tone]} bg-ink-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-dark`}
                   >
                     <div
                       className={`grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${trackGrad[track.tone]} text-white`}
@@ -233,7 +233,7 @@ export default function ProgramsPage() {
             title="Every program includes everything to teach it"
           />
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="stagger mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <div
               key={f.title}
@@ -322,7 +322,7 @@ export default function ProgramsPage() {
               </div>
             )}
 
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="stagger mt-8 grid gap-4 md:grid-cols-2">
               {track.programs.map((p) => (
                 <div key={p.slug} className="reveal h-full">
                   <ProgramCard

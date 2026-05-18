@@ -44,7 +44,7 @@ function Metric({
   }[tone];
   return (
     <div
-      className={`flex flex-col justify-end rounded-2xl border p-4 transition-transform hover:-translate-y-1 sm:p-5 ${toneCls} ${className}`}
+      className={`reveal flex flex-col justify-end rounded-2xl border p-4 transition-transform hover:-translate-y-1 sm:p-5 ${toneCls} ${className}`}
     >
       <div className="text-2xl">{icon}</div>
       <div
@@ -203,7 +203,7 @@ export default function HomePage() {
             </div>
 
             {/* Bento metric grid */}
-            <div className="reveal grid grid-cols-3 gap-2.5 sm:gap-3">
+            <div className="stagger grid grid-cols-3 gap-2.5 sm:gap-3">
               <Metric
                 icon="💰"
                 label="New revenue"
@@ -214,7 +214,7 @@ export default function HomePage() {
               <Metric icon="📊" label="Monthly retention" value="95%" />
 
               {/* Featured price card — spans two rows */}
-              <div className="row-span-2 flex flex-col items-center justify-center rounded-2xl border border-white/6 bg-ink-card p-4 text-center transition-transform hover:-translate-y-1 sm:p-5">
+              <div className="reveal row-span-2 flex flex-col items-center justify-center rounded-2xl border border-white/6 bg-ink-card p-4 text-center transition-transform hover:-translate-y-1 sm:p-5">
                 <div className="font-heading text-[40px] font-extrabold leading-none text-white sm:text-6xl">
                   $40
                 </div>
@@ -245,7 +245,7 @@ export default function HomePage() {
       {/* ===== 2. CTA Form ===== */}
       <section id="cta-form" className="scroll-mt-20 py-16 sm:py-20">
         <Container>
-          <div className="reveal relative mx-auto max-w-2xl overflow-hidden rounded-3xl border-2 border-brand/25 bg-ink-card p-8 shadow-card-dark sm:p-10">
+          <div className="reveal reveal-scale relative mx-auto max-w-2xl overflow-hidden rounded-3xl border-2 border-brand/25 bg-ink-card p-8 shadow-card-dark sm:p-10">
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand to-cyan" />
             <h2 className="font-heading text-2xl font-bold text-white sm:text-[28px]">
               Get a free lesson from any program — Coding, Robotics, or Digital
@@ -274,7 +274,7 @@ export default function HomePage() {
               What this does for your center
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="stagger mt-12 grid gap-6 md:grid-cols-3">
             {benefits.map((b) => (
               <div
                 key={b.title}
@@ -320,7 +320,7 @@ export default function HomePage() {
               Three steps to your first STEM group
             </h2>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="stagger mt-12 grid gap-8 md:grid-cols-3">
             {steps.map((s, i) => (
               <div key={s.title} className="reveal text-center">
                 <div
@@ -405,7 +405,7 @@ export default function HomePage() {
               Proven across 500+ students right now
             </h2>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-5 md:grid-cols-4">
+          <div className="stagger mt-12 grid grid-cols-2 gap-5 md:grid-cols-4">
             {stats.map((s) => (
               <div
                 key={s.label}
@@ -437,7 +437,7 @@ export default function HomePage() {
               $40/month. Everything included.
             </h2>
           </div>
-          <div className="reveal relative mx-auto mt-12 max-w-2xl overflow-hidden rounded-3xl border-2 border-brand/30 bg-ink-card p-8 text-center sm:p-12">
+          <div className="reveal reveal-scale relative mx-auto mt-12 max-w-2xl overflow-hidden rounded-3xl border-2 border-brand/30 bg-ink-card p-8 text-center sm:p-12">
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand to-cyan" />
             <div className="text-xs font-bold uppercase tracking-[2px] text-cyan">
               Per Program
@@ -486,7 +486,7 @@ export default function HomePage() {
               Enter your numbers. The math updates as you type.
             </p>
           </div>
-          <div className="reveal mt-10">
+          <div className="reveal reveal-scale mt-10">
             <BusinessCalculator />
           </div>
         </Container>
@@ -503,11 +503,11 @@ export default function HomePage() {
               Questions, answered
             </h2>
           </div>
-          <div className="reveal mx-auto mt-10 max-w-2xl space-y-3">
+          <div className="stagger mx-auto mt-10 max-w-2xl space-y-3">
             {faqs.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-2xl border border-white/6 bg-ink-card p-5"
+                className="reveal group rounded-2xl border border-white/6 bg-ink-card p-5"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
                   <span className="font-heading text-base font-bold text-white">
